@@ -1,13 +1,17 @@
 <template>
 <!--模板下只能向外暴露一个标签-->
   <div>
-   hello
+    <home-header></home-header>
   </div>
 </template>
 
 <script>
+import HomeHeader from './components/Header'
 export default {
-  name: 'Home'
+  name: 'Home',
+  components: {
+    HomeHeader
+  }
 }
 </script>
 
