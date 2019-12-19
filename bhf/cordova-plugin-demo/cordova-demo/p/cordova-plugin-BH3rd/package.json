@@ -1,0 +1,17 @@
+{
+  "name": "BH3rd",
+  "version": "1.0.0",
+  "description": "BH3rd",
+  "cordova": {
+    "id": "cordova-plugin-BH3rd",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "author": "wangweichao",
+  "license": "ISC"
+}

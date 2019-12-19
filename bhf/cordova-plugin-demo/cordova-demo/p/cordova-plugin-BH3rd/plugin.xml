@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-BH3rd" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>BH3rd</name>
+    <js-module name="BH3rd" src="www/BH3rd.js">
+        <clobbers target="BH3rd" />
+    </js-module>
+    
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="BH3rd">
+                <param name="ios-package" value="BH3rd"/>
+            </feature>
+        </config-file>
+        <podspec>
+            <config>
+                <source url="https://git.coding.net/CocoaPods/Specs.git"/>
+            </config>
+            <pods use-frameworks="true">
+                <pod name="MBProgressHUD" version="1.1.0"/>
+                <pod name="MJRefresh" version="3.1.15.1"/>
+                <pod name="Masonry" version="v1.1.0"/>
+            </pods>
+        </podspec>
+    </platform>
+    
+</plugin>
