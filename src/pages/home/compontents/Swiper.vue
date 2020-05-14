@@ -12,6 +12,20 @@
 <script>
 export default {
   name: 'HomeSwiper',
+  props: {
+    swiperList: {
+      type: Array
+    }
+  },
+  data () {
+    return {
+      swiperOptions: {
+        pagination: '.swiper-pagination',
+        loop: true
+      }
+    }
+  }
+
   // ES5写法
   // data: function () {
   //   return {
@@ -19,23 +33,23 @@ export default {
   //   }
   // }
   // ES6写法
-  data () {
-    return {
-      swiperOptions: {
-        pagination: '.swiper-pagination',
-        loop: true
-      },
-      swiperList: [{
-        id: '001',
-        alt: '圆明园',
-        imgUrl: 'https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20201/8216fd250c35366befc35f6353f934b9.jpg_890x330_9062b3ba.jpg'
-      }, {
-        id: '002',
-        alt: '颐和园',
-        imgUrl: 'https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20201/86ca4dc2777b997607e97eb8471dcafd.jpg_890x330_0eee7728.jpg'
-      }]
-    }
-  }
+//   data () {
+//     return {
+//       swiperOptions: {
+//         pagination: '.swiper-pagination',
+//         loop: true
+//       },
+//       swiperList: [{
+//         id: '001',
+//         alt: '圆明园',
+//         imgUrl: 'https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20201/8216fd250c35366befc35f6353f934b9.jpg_890x330_9062b3ba.jpg'
+//       }, {
+//         id: '002',
+//         alt: '颐和园',
+//         imgUrl: 'https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20201/86ca4dc2777b997607e97eb8471dcafd.jpg_890x330_0eee7728.jpg'
+//       }]
+//     }
+//   }
 }
 </script>
 

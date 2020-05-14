@@ -1,15 +1,15 @@
 <template>
   <ul>
-    <li>
-      <div class="title">
-        周末旅游
-      </div>
+    <div class="title">
+      周末旅游
+    </div>
+    <li v-for="item of weekendList" :key="item.id">
       <div class="item-img-test">
-        <img class="item-img" src="http://imgs.qunarzz.com/wugc/p147/201205/30/249ffb73fa960f4193835fbb.jpg_710x360_6c75e1ac.jpg" alt="">
+        <img class="item-img" :src="item.imageUrl" alt="">
       </div>
       <div class="item-info">
-        <p class="item-title">想去哪儿 就去哪儿</p>
-        <p class="item-des">黔灵山公园</p>
+        <p class="item-title">{{item.title}}</p>
+        <p class="item-des">{{item.des}}</p>
       </div>
     </li>
   </ul>
@@ -17,7 +17,12 @@
 
 <script>
 export default {
-  name: 'HomeWeekend'
+  name: 'HomeWeekend',
+  props: {
+    weekendList: {
+      type: Array
+    }
+  }
 }
 </script>
 

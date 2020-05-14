@@ -1,0 +1,102 @@
+{
+  "ret": true,
+  "body": {
+    "city": "北京",
+    "swiperList": [{
+      "id": "001",
+      "alt": "圆明园",
+      "imgUrl": "https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20201/8216fd250c35366befc35f6353f934b9.jpg_890x330_9062b3ba.jpg"
+    }, {
+      "id": "002",
+      "alt": "颐和园",
+      "imgUrl": "https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20201/86ca4dc2777b997607e97eb8471dcafd.jpg_890x330_0eee7728.jpg"
+    },
+      {
+        "id": "003",
+        "alt": "北海公园",
+        "imgUrl":"http://imgs.qunarzz.com/sight/p0/1507/44/2fef900d9523f298e4c0ee5bb34be06e.water.jpg_710x360_33f86860.jpg"
+      }],
+    "iconList": [{
+      "id": "001",
+      "imgUrl": "https://imgs.qunarzz.com/sight/p0/1708/2b/2b3b94de99c0a425a3.img.jpg_224x148_ab7a0138.jpg",
+      "alt": "[北京]八达岭长城手机电子导游【含19个讲解点、景点故事】不含门票",
+      "des": "热门景点"
+    }, {
+      "id": "002",
+      "imgUrl": "https://imgs.qunarzz.com/p/tts6/2004/c7/e0c905c813de8202.jpg_224x148_f94ffe45.jpg",
+      "alt": "[北京]慕田峪长城直通车【品牌慕巴士】休息区+观景平台+免费迎宾茶",
+      "des": "热门景点"
+    }, {
+      "id": "003",
+      "imgUrl": "https://imgs.qunarzz.com/p/tts0/1905/1b/acbaa67ca03c8502.png_224x148_18a86dc5.png",
+      "alt": "[北京]【可选五环上门接】北京故宫+八达岭长城1日游|故宫深度半日游",
+      "des": "热门景点"
+    }, {
+      "id": "004",
+      "imgUrl": "https://imgs.qunarzz.com/p/tts3/1910/35/ee1f2ce0ac76402.jpg_224x148_b693c438.jpg",
+      "alt": "[北京]【精选·颐和园一日游】天坛公园+圆明园+颐和园（可独立成团）",
+      "des": "热门景点"
+    }, {
+      "id": "005",
+      "imgUrl": "https://imgs.qunarzz.com/p/tts3/2001/32/2fb8cefb819e6402.jpg_224x148_96145a72.jpg",
+      "alt": "[北京]慕田峪长城直通车+门票一日游【赞巴士®休息区+热水+摆渡车】",
+      "des": "热门景点"
+    }, {
+      "id": "006",
+      "imgUrl": "https://imgs.qunarzz.com/p/tts3/2001/32/2fb8cefb819e6402.jpg_224x148_96145a72.jpg",
+      "alt": "[北京]慕田峪长城直通车+门票一日游【赞巴士®休息区+热水+摆渡车】",
+      "des": "热门景点"
+    }, {
+      "id": "007",
+      "imgUrl": "https://imgs.qunarzz.com/p/tts3/2001/32/2fb8cefb819e6402.jpg_224x148_96145a72.jpg",
+      "alt": "[北京]慕田峪长城直通车+门票一日游【赞巴士®休息区+热水+摆渡车】",
+      "des": "热门景点"
+    }, {
+      "id": "008",
+      "imgUrl": "https://imgs.qunarzz.com/p/tts3/2001/32/2fb8cefb819e6402.jpg_224x148_96145a72.jpg",
+      "alt": "[北京]慕田峪长城直通车+门票一日游【赞巴士®休息区+热水+摆渡车】",
+      "des": "热门景点"
+    }, {
+      "id": "009",
+      "imgUrl": "https://imgs.qunarzz.com/p/tts6/2004/c7/e0c905c813de8202.jpg_224x148_f94ffe45.jpg",
+      "alt": "[北京]慕田峪长城直通车【品牌慕巴士】休息区+观景平台+免费迎宾茶",
+      "des": "热门景点"
+    }],
+    "recommendList": [{
+      "id": "001",
+      "imgUrl": "https://imgs.qunarzz.com/sight/p0/1507/cc/19733fc0135062788140cbb48ae606a7.water.jpg_224x148_a5c76955.jpg",
+      "title": "北京野生动物园",
+      "des": "北京郊区的一座大型自然生态动物园"
+    },
+      {
+        "id": "002",
+        "imgUrl": "https://imgs.qunarzz.com/sight/p0/1507/cc/19733fc0135062788140cbb48ae606a7.water.jpg_224x148_a5c76955.jpg",
+        "title": "北京野生动物园",
+        "des": "北京郊区的一座大型自然生态动物园"
+      },
+      {
+        "id": "003",
+        "imgUrl": "https://imgs.qunarzz.com/sight/p0/1507/cc/19733fc0135062788140cbb48ae606a7.water.jpg_224x148_a5c76955.jpg",
+        "title": "北京野生动物园",
+        "des": "北京郊区的一座大型自然生态动物园"
+      }],
+    "weekendList": [{
+      "id": "001",
+      "title": "黔灵山公园",
+      "des": "追逐嬉闹，悠然自得，顿生无限情趣",
+      "imageUrl": "http://imgs.qunarzz.com/wugc/p147/201205/30/249ffb73fa960f4193835fbb.jpg_710x360_6c75e1ac.jpg"
+    },
+      {
+        "id": "002",
+        "title": "青岩古镇",
+        "des": "由土城而渐成街巷纵横错综之石城",
+        "imageUrl": "http://imgs.qunarzz.com/sight/p0/2002/b4/b48e1f659fa1cd97a3.img.jpg_710x360_c3a8b664.jpg"
+      },
+      {
+        "id": "003",
+        "title": "天河潭旅游度假区",
+        "des": "黄果树瀑布之雄，龙宫之奇花溪之秀",
+        "imageUrl": "https://imgs.qunarzz.com/sight/p0/1803/c7/c7a0d45450ff744da3.img.jpg_710x360_12f95f87.jpg"
+      }]
+  }
+}
