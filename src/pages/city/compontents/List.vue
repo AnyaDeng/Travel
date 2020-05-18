@@ -21,10 +21,17 @@
           </div>
         </div>
       </div>
-      <div class="area" v-for="(item,key) of cities" :key="key">
+      <div
+        class="area"
+        v-for="(item,key) of cities"
+        :key="key"
+        :ref="key">
         <div class="title border-topbottom">{{key}}</div>
         <div class="item-list">
-          <div class="item border-bottom"  v-for="innerItem of item" :key="innerItem.id">
+          <div
+            class="item border-bottom"
+            v-for="innerItem of item"
+            :key="innerItem.id">
             {{innerItem.name}}
           </div>
         </div>
@@ -43,10 +50,21 @@ export default {
     },
     hotCities: {
       type: Array
+    },
+    letter: {
+      type: String
     }
   },
   mounted () {
     this.scroll = new Bscroll(this.$refs.warpper)
+  },
+  watch: {
+    letter: function () {
+      if (this.letter) {
+        const ele = this.$refs[this.letter][0]
+        this.scroll.scrollToElement(ele)
+      }
+    }
   }
 }
 </script>

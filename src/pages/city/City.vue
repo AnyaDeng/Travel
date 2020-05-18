@@ -2,8 +2,16 @@
   <div>
     <city-header></city-header>
     <city-search></city-search>
-    <city-list :cities="cities" :hot-cities="hotCities"></city-list>
-    <city-alpahBar :cities="cities"></city-alpahBar>
+    <city-list
+      :cities="cities"
+      :hot-cities="hotCities"
+      :letter="letter"
+    ></city-list>
+    <city-alpahBar
+      :cities="cities"
+      @changeLetter="handleChangeLetter"
+    >
+    </city-alpahBar>
   </div>
 </template>
 
@@ -24,7 +32,8 @@ export default {
   data () {
     return {
       cities: {},
-      hotCities: []
+      hotCities: [],
+      letter: ''
     }
   },
   methods: {
@@ -37,6 +46,9 @@ export default {
         this.cities = responData.cities
         this.hotCities = responData.hotCities
       }
+    },
+    handleChangeLetter (letter) {
+      this.letter = letter
     }
   },
   mounted () {
