@@ -19,7 +19,9 @@ export default {
   name: 'CityAlpahBar',
   data () {
     return {
-      isStart: false
+      isStart: false,
+      startY: 0,
+      timer: null
     }
   },
   computed: {
@@ -36,6 +38,9 @@ export default {
       type: Object
     }
   },
+  updated () {
+    this.startY = this.$refs['A'][0].offsetTop
+  },
   methods: {
     handleLetterClick (e) {
       this.$emit('changeLetter', e.target.innerText)
@@ -44,11 +49,17 @@ export default {
       this.isStart = true
     },
     handleTouchMove (e) {
+      // 函数节流
       if (this.isStart) {
-        let startY = this.$refs['A'][0].offsetTop
-        let touchY = e.touches[0].clientY - 79
-        let index = Math.floor((touchY - startY) / 22)
-        this.$emit('changeLetter', this.letters[index])
+        if (this.timer) {
+          clearTimeout(this.timer)
+        }
+        // 16毫秒内如果重复做这个动作则不会执行
+        this.timer = setTimeout(() => {
+          let touchY = e.touches[0].clientY - 79
+          let index = Math.floor((touchY - this.startY) / 22)
+          this.$emit('changeLetter', this.letters[index])
+        }, 16)
       }
     },
     handleTouchEnd () {
@@ -65,7 +76,7 @@ export default {
   flex-direction column
   justify-content center
   position absolute
-  right 0
+  right .2rem
   top 1.54rem
   bottom 0
   width .4rem
