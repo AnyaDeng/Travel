@@ -2,16 +2,20 @@
   <div>
     <div class="recommend-title">推荐列表</div>
     <ul>
-      <li v-for="item of recommendList" :key="item.id">
-        <div class="item border-bottom">
-          <img class="item-img" :src="item.imgUrl" alt="">
-          <div class="info">
-            <p class="info-title">{{item.title}}</p>
-            <p class="info-desc">{{item.des}}</p>
-            <button class="info-button">查看详情</button>
-          </div>
+      <router-link
+        tag="li"
+        class="item border-bottom"
+        v-for="item of recommendList"
+        :key="item.id"
+        :to="'detail/' + item.id"
+      >
+        <img class="item-img" :src="item.imgUrl" alt="">
+        <div class="info">
+          <p class="info-title">{{item.title}}</p>
+          <p class="info-desc">{{item.des}}</p>
+          <button class="info-button">查看详情</button>
         </div>
-      </li>
+      </router-link>
     </ul>
   </div>
 </template>
@@ -24,36 +28,6 @@ export default {
       type: Array
     }
   }
-  // data () {
-  //   return {
-  //     recommendList: [{
-  //       id: '001',
-  //       imgUrl: 'https://imgs.qunarzz.com/sight/p0/1507/cc/19733fc0135062788140cbb48ae606a7.water.jpg_224x148_a5c76955.jpg',
-  //       title: '北京野生动物园',
-  //       des: '北京郊区的一座大型自然生态动物园'
-  //     }, {
-  //       id: '002',
-  //       imgUrl: 'https://imgs.qunarzz.com/sight/p0/1507/cc/19733fc0135062788140cbb48ae606a7.water.jpg_224x148_a5c76955.jpg',
-  //       title: '北京野生动物园',
-  //       des: '北京郊区的一座大型自然生态动物园'
-  //     }, {
-  //       id: '003',
-  //       imgUrl: 'https://imgs.qunarzz.com/sight/p0/1507/cc/19733fc0135062788140cbb48ae606a7.water.jpg_224x148_a5c76955.jpg',
-  //       title: '北京野生动物园',
-  //       des: '北京郊区的一座大型自然生态动物园'
-  //     }, {
-  //       id: '004',
-  //       imgUrl: 'https://imgs.qunarzz.com/sight/p0/1507/cc/19733fc0135062788140cbb48ae606a7.water.jpg_224x148_a5c76955.jpg',
-  //       title: '北京野生动物园',
-  //       des: '北京郊区的一座大型自然生态动物园'
-  //     }, {
-  //       id: '005',
-  //       imgUrl: 'https://imgs.qunarzz.com/sight/p0/1507/cc/19733fc0135062788140cbb48ae606a7.water.jpg_224x148_a5c76955.jpg',
-  //       title: '北京野生动物园',
-  //       des: '北京郊区的一座大型自然生态动物园'
-  //     }]
-  //   }
-  // }
 }
 </script>
 
