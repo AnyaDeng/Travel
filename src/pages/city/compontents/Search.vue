@@ -12,7 +12,9 @@
         <li
           class="item-list border-bottom"
           v-for="item of list"
-          :key="item.id">
+          :key="item.id"
+          @click="handleButtonClick(item.name)"
+        >
           {{item.name}}
         </li>
         <li class="item-list border-bottom" v-if="hasNoData">
@@ -37,6 +39,12 @@ export default {
       keyword: '',
       list: [],
       timer: null
+    }
+  },
+  methods: {
+    handleButtonClick (city) {
+      this.$store.dispatch('changeCity', city)
+      this.$router.push('./')
     }
   },
   computed: {

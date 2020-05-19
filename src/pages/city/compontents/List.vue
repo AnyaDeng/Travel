@@ -6,7 +6,7 @@
         <div class="button-list">
           <div class="button-wrapper">
             <div class="button">
-              北京
+              {{this.$store.state.city}}
             </div>
           </div>
         </div>
@@ -14,7 +14,7 @@
       <div class="area">
         <div class="title border-topbottom">热门城市</div>
         <div class="button-list" v-for="item of hotCities" :key="item.id">
-          <div class="button-wrapper">
+          <div class="button-wrapper" @click="handleButtonClick(item.name)">
             <div class="button">
               {{item.name}}
             </div>
@@ -31,7 +31,9 @@
           <div
             class="item border-bottom"
             v-for="innerItem of item"
-            :key="innerItem.id">
+            :key="innerItem.id"
+            @click="handleButtonClick(innerItem.name)"
+          >
             {{innerItem.name}}
           </div>
         </div>
@@ -55,8 +57,10 @@ export default {
       type: String
     }
   },
-  mounted () {
-    this.scroll = new Bscroll(this.$refs.warpper)
+  methods: {
+    handleButtonClick (city) {
+      this.$store.dispatch('changeCity', city)
+    }
   },
   watch: {
     letter: function () {
@@ -65,6 +69,9 @@ export default {
         this.scroll.scrollToElement(ele)
       }
     }
+  },
+  mounted () {
+    this.scroll = new Bscroll(this.$refs.warpper)
   }
 }
 </script>
