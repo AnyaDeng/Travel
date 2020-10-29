@@ -1,0 +1,49 @@
+@import '../../../common/stylus/mixin.styl';
+.icon-invisible:before
+  font-size: 0.21rem
+  vertical-align middle
+.icon-visible:before
+  font-size: 0.21rem
+  vertical-align middle
+
+ul
+  padding-top  0.1rem
+  li
+    .visible
+      position absolute
+      display inline
+      right 0rem
+    .login
+      height 100%
+      border-bottom-1px(1px, #e6e6e6)
+    .inputBox
+      display: inline-block
+      line-height: 0.2rem
+      width 70%
+  li:first-child
+    height 0.45rem
+    line-height 0.45rem
+    background #ffffff
+    padding 0 0.2rem
+    .loginPassword
+      font-family SourceHanSansCN-Regular;
+      color #232323
+      font-size 0.14rem
+      margin-right 0.285rem
+
+  .confirmPassword
+    height 0.45rem
+    line-height 0.45rem
+    background #ffffff
+    margin-bottom 0.01rem
+    padding 0 0.2rem
+    .login
+      border-bottom-1px(0px, #e6e6e6)
+    .conPassword
+      font-family SourceHanSansCN-Regular;
+      color #232323
+      font-size 0.14rem
+      margin-right 0.285rem
+  .validate-errors
+    padding-left 0.2rem
+    height 0.5rem

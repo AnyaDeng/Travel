@@ -1,0 +1,560 @@
+@import '../../../common/stylus/mixin.styl';
+.loginHomePage
+  overflow-y: auto
+  -webkit-overflow-scrolling: touch
+  min-height: 100%
+  background: #f7f7f9
+  padding: 0 0 0.5rem
+  .yo-scroll.refresh, .yo-scroll.touch, .yo-scroll.down
+    height: 100%
+    top: 0 !important // 此处需覆盖原组件行内样式,暂用!important
+    .inner
+      height: 100%
+  .wrap
+    flex: 1 0 auto
+  .tip
+    flex-shrink: 0
+  .product-content
+    padding-bottom: 0.5rem
+    display: flex
+    display: -webkit-flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+    -webkit-align-items: center
+    min-height: 100%
+    .cntBox
+      width: 100%
+      margin-bottom: 0.36rem
+      .recommendModule
+        padding: 0 0 0.1rem
+        background: #ffffff
+        margin-bottom 0.1rem
+      .regularModule
+        padding: 0.1rem 0 0
+        background: #ffffff
+        margin-bottom: 0.1rem
+        .redularProduct
+          padding-top: 0
+          margin-bottom: 0
+  .swiper-container-box
+    position: relative
+    .swiper-container-bullet
+      background: #ffffff
+    .swiper-container-bullet-active
+      background-color #ffffff
+    .noneBanner
+      position:relative
+      img
+        position: absolute
+        bottom: 0rem
+        left: 0rem
+    .swiper-slide
+      position: relative
+      img
+        position: absolute
+        bottom: 0rem
+        left: 0rem
+    .activityModules
+      position: absolute
+      z-index: 2
+      left: 50%
+      bottom: -0.58rem
+      transform: translate(-50%, 0)
+      width: 100%
+      height: 0.73rem
+      background: #ffffff
+      border-top-left-radius: 0.12rem
+      border-top-right-radius: 0.12rem
+      overflow-x: hidden
+      //box-shadow:0 0.04rem 0.08rem 0 rgba(213,215,222,0.4)
+      //padding: 0.13rem 0
+      div.iconBox
+        display: flex
+        display: -webkit-flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        -webkit-align-items: center
+        div
+          position: relative
+          span.iconTag
+            position: absolute
+            top: 0
+            left: 70%
+            min-width: 0.09rem
+            height: 0.09rem
+            border-radius: 50%
+            background: #DF2A27
+          span.iconTagCnt
+            position: absolute
+            top: 0
+            left: 50%
+            box-sizing: border-box
+            padding: 0 0.01rem
+            height: 0.15rem
+            background-image: linear-gradient(-227deg, #FF6F6B 0%, #DF2A27 100%)
+            border-radius: 0.08rem
+            border-bottom-left-radius: 0rem
+            i
+              display: inline-block
+              min-width: 0.25rem
+              max-width: 0.64rem
+              padding: 0.02rem 0
+              overflow: hidden
+              white-space: nowrap
+              font-style: normal
+              font-family: SourceHanSansCN-Normal
+              font-size: 0.12rem
+              color: #ffffff
+              transform: scale(0.75)
+              text-overflow: ellipsis
+          img
+            width: 0.35rem
+            height: 0.35rem
+        span.iconTlt
+          margin-top: 0.045rem
+          font-family: SourceHanSansCN-Regular
+          color: #454545
+          font-size: 0.13rem
+  .bannerImgModules
+    padding: 0.1rem 0 0
+    div
+      width: 3.36rem
+      img
+        width: 1.63rem
+        height: 0.8rem
+        //border-radius: 0.05rem
+        //border: 0.01rem solid #E6E6E6
+
+  .swiper-container-box-margin
+    margin-bottom: 0.68rem
+  .center-swiper-box, .bottom-swiper-box
+    width: 100%
+    padding: 0.1rem 0 0
+    .swiper-box-inner
+      width: 3.35rem
+      height: 0.77rem
+      //border-radius: 0.05rem
+      //border: 0.01rem solid #E6E6E6
+      .swiper-pagination-bullets
+        bottom: 0.04rem !important
+
+  .list-header-title
+    span
+      font-size: 0.18rem
+  .bottom-swiper-box
+    padding: 0 0 0.1rem
+  .productBanner
+    .navigation
+      display: flex
+      display: -webkit-flex
+      justify-content: center
+      -webkit-justify-content: center
+      align-items: center
+      -webkit-align-items: center
+      width: 100%
+      border-bottom: 0.01rem solid #E6E6E6
+      background: #fff
+      padding: 0.04rem 0 0.18rem 0
+      div
+        /*width: 25%*/
+        display: flex
+        display: -webkit-flex
+        justify-content: center
+        -webkit-justify-content: center
+        align-items: center
+        -webkit-align-items: center
+        flex-direction: column
+        a
+          display: flex
+          display: -webkit-flex
+          justify-content: center
+          -webkit-justify-content: center
+          align-items: center
+          -webkit-align-items: center
+          flex-direction: column
+          .msgIcon
+            display: inline-block
+            min-width: 0.31rem
+            height: 0.16rem
+            line-height: 0.13rem
+            background: url(../../../common/img/msgIcon.png) no-repeat
+            background-position: center center;
+            background-size: 100% 100%
+            font-family: Roboto-Regular
+            font-size: 0.09rem
+            color: #fff
+            text-align: center
+            margin-left: 0.57rem
+            align-self: flex-end
+          span
+            &.icon
+              height 0.3rem
+              line-height 0.3rem
+            &.icon-current
+              font-size 0.27rem
+            &.icon-terminal
+              font-size 0.3rem
+            &.icon-Fund
+              font-size 0.26rem
+            &.icon-loans
+              font-size 0.27rem
+          span[class^="icon-"]
+            font-size: 0.3rem
+          span.tab-label
+            font-family: SourceHanSansCN-Normal
+            color: #263147
+            font-size: 0.09rem
+    .navigation-project2
+      width: 100%
+      background: #fff
+      padding: 0.15rem 0.075rem
+      display: flex
+      display: -webkit-flex
+      justify-content: center
+      -webkit-justify-content: center
+      align-items: center
+      -webkit-align-items: center
+      a
+        height: 0.53rem
+        position: relative
+        /*border: 0.005rem solid #D7A853*/
+        /*border-radius: 0.05rem*/
+        margin: 0 0.075rem
+        display: flex
+        display: -webkit-flex
+        justify-content: center
+        -webkit-justify-content: center
+        align-items: center
+        -webkit-align-items: center
+        flex-grow: 1
+        span
+          &.icon
+            width: 0.3rem
+            height 0.3rem
+            line-height 0.3rem
+          &.icon-current
+            font-size 0.27rem
+          &.icon-terminal
+            font-size 0.3rem
+          &.icon-Fund
+            font-size 0.26rem
+          &.icon-loans
+            font-size 0.27rem
+        span.topTitle
+          width: 0.3rem
+          height: 0.3rem
+          position: absolute
+          top: 0
+          right: 0
+          span
+            position: absolute
+          span:first-child
+            top: 0
+            right: 0
+            width: 0
+            height: 0
+            transform: rotate(90deg)
+            border-width: 0.19rem
+            border-color: #D7A853 transparent transparent #D7A853
+            border-style: solid
+            border-top-left-radius: 0.03rem
+          span:last-child
+            top: 0.08rem
+            right: 0
+            color: #fff
+            font-family: Roboto-Regular
+            font-size: 0.08rem
+            display: inline-block
+            transform: rotate(45deg)
+        span[class^="icon-"]
+          font-size: 0.3rem
+        span.tab-label
+          font-family: SourceHanSansCN-Normal
+          margin-left: 0.09rem
+          color: #263147
+          font-size: 0.14rem
+    .contentSwiper
+      background: #fff
+      .swiper-container-horizontal
+        .swiper-pagination-bullets
+          bottom: 0.09rem !important
+  .product-list
+    padding-top: 0.1rem
+    .list-header
+      padding: 0.09rem 0.2rem
+      .list-header-link
+        span
+          color: #AAB1C4
+          font-size: 0.13rem
+          font-family: SourceHanSansCN-Normal
+    .introduce
+      padding: 0 0.2rem 0.07rem
+      font-family: SourceHanSansCN-Normal
+      color: #7D8497
+      font-size: 0.12rem
+      line-height: 0.16rem
+    .list-group
+      ul
+        list-border-top-1px(1px, #e6e6e6)
+        min-height: 0.905rem
+        .message-noProduct
+          text-align center
+          height:0.9rem
+          line-height:0.9rem
+          color:#7D8497
+          font-size:14px
+          font-family:SourceHanSansCN-Regular
+          font-weight:400
+        .list-group-item:first-child
+          list-border-top-1px(0px, #e6e6e6)
+        .list-group-item
+          display: flex
+          display: -webkit-flex
+          align-items: center
+          -webkit-align-items: center
+          min-height: 0.905rem
+          box-sizing: border-box
+          list-border-bottom-1px(0px, #e6e6e6)
+          list-border-top-1px(1px, #e6e6e6)
+          .produceBox
+            position: relative
+            width: 100%
+            display: flex
+            display: -webkit-flex
+            align-items: flex-end
+            -webkit-align-items: flex-end
+            overflow hidden
+            .productCnt-left
+              min-width: 1.15rem
+              div:first-child
+                font-family: Roboto-Regular
+                color: #CC924F
+                font-size: 0.15rem
+                margin-bottom: 0.09rem
+                span
+                  font-family: Roboto-Regular;
+                  color: #CC924F
+                  font-size: 0.23rem
+                  font-weight: bold
+              div:last-child
+                font-family: SourceHanSansCN-Normal
+                color: #7D8497
+                font-size: 0.12rem
+            .productCnt-right
+              display: flex
+              display: -webkit-flex
+              justify-content space-between
+              -webkit-justify-content: space-between
+              align-items: flex-end
+              -webkit-align-items: flex-end
+              flex-grow: 1
+              .cntTxt
+                min-height: 0.395rem
+                display: flex
+                display: -webkit-flex
+                flex-direction: column
+                justify-content: space-between
+                -webkit-justify-content: space-between
+                align-items: flex-start
+                -webkit-align-items: flex-start
+                .productName
+                  width 1.9rem
+                  white-space: nowrap
+                  text-overflow: ellipsis
+                  overflow: hidden
+                div
+                  font-family: SourceHanSansCN-Regular
+                  color: #232323
+                  font-size: 0.14rem
+                div.onSaleTime
+                  display: flex
+                  display: -webkit-flex
+                  align-items: center
+                  -webkit-align-items: center
+                  margin-bottom: 0.085rem
+                div.productDetails
+                  display: flex
+                  display: -webkit-flex
+                  align-items: center
+                  -webkit-align-items: center
+                  margin: 0.065rem 0 0 0.01rem
+                  div, .textStyle
+                    font-family: SourceHanSansCN-Normal
+                    color: #7D8497
+                    font-size: 0.12rem
+                    margin-right: 0.04rem
+                    white-space: nowrap
+                    span
+                      font-family Roboto-Regular
+                      color: #CC924F
+
+                    .demand
+                      display inline-block;
+                      width 0.02rem;
+                      height 0.02rem;
+                      border-radius 50%;
+                      background-color #7d8497
+                  .donateImg
+                    bg-image('../../../common/img/donateImg')
+                    width 0.26rem
+                    height 0.12rem
+                    animation donateRotate 1s infinite
+
+        li.theGrey
+          .produceBox
+            .productCnt-left
+              div:first-child
+                color: greyColor
+                span
+                  color: greyColor
+              div:last-child
+                color: greyColor
+            .productCnt-right
+              .img-fullScale
+                position: absolute
+                right: 0
+                top: 50%
+                transform: translate(0%,-50%)
+                z-index: 1
+              .cntTxt
+                position: relative
+                z-index: 5
+                div
+                  color: greyColor
+                div.productDetails
+                  margin-top: 0.065rem
+                  div
+                    color: greyColor
+                    span
+                      color: greyColor
+                  .privilege
+                    background greyColor
+  .term-list-group
+    .term-list-group-item
+      display: flex
+      display: -webkit-flex
+      align-items: center
+      -webkit-align-items: center
+      box-sizing: border-box
+      display: inline-block;
+      margin-right 0.1rem
+      margin-bottom: 0.13rem;
+    .term-list-group-item:last-child
+      margin-right 0rem;
+    .productBox
+      width: 100%;
+      overflow-x: scroll;
+      &::-webkit-scrollbar {  //隐藏滚动条
+        display: none;
+      }
+      .termContent
+        padding-left: 0.2rem;
+        padding-right: 0.2rem;
+        .productItem
+          font-family: SourceHanSansCN-Regular;
+          color: #232323;
+          width: 1.5rem;
+          border: 1px solid rgba(242,242,242,1);
+          box-shadow: 0px 4px 10px 0px rgba(172,175,184,0.2);
+          border-radius: 0.025rem;
+          .termProName
+            font-size 0.14rem;
+            padding-top 0.18rem;
+            text-align center;
+          .term-number-font
+            font-family Roboto-Light;
+            color: #D7A853;
+            font-size 0.14rem;
+            text-align center;
+            padding-top 0.14rem;
+            span
+              font-family Roboto-Regular;
+              font-size 0.25rem;
+              padding-right 0.02rem;
+          .termInfo
+            font-family SourceHanSansCN-Normal;
+            font-size 0.12rem;
+            color: #7D8497;
+            text-align center;
+            padding-top 0.05rem;
+          .term-single-buy
+            text-align center;
+            font-size 0.12rem;
+            padding-top 0.14rem;
+            padding-bottom: 0.15rem;
+            color #7d8497
+            .term-money
+              color: #D7A853;
+              font-family Roboto-Regular;
+            .sloganLeft
+              padding-left 0.05rem
+            .privilege
+              font-family: SourceHanSansCN-Normal;
+              font-size: 0.12rem;
+              color: #D7A853;
+              max-width: 0.62rem;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              overflow: hidden;
+              display inline-block;
+              position: relative;
+      .hideScroll
+        width: 100%;
+        height: 0.07rem;
+        background-color: #fff;
+        position: absolute;
+        z-index: 1000;
+  .emptyModule
+    background: #ffffff
+    margin-bottom: 0.1rem
+    .skeletonModule
+      padding: 0.12rem 0 0
+      .van-skeleton
+        padding: 0 0.2rem 0.12rem
+        .van-skeleton__content
+          padding-top: 0
+        .van-skeleton__title+.van-skeleton__row
+          margin-top: 0.12rem
+    .noProduct
+      .img-noProduct
+        margin-top: 0.1rem
+        width: 1.77rem
+        height: 0.725rem
+        bg-image('../../../common/img/queryFailed')
+      .warn-noProduct
+        margin: 0.3rem 0 0
+        font-family: SourceHanSansCN-Regular
+        font-size: 0.15rem
+        color: #7D8497
+        span
+          margin: 0 0 0.15rem
+      .refreshBtn
+        display: flex
+        display: -webkit-flex
+        justify-content: center
+        -webkit-justify-content: center
+        align-items: center
+        -webkit-align-items: center
+        flex-direction: column
+        span
+          font-family: SourceHanSansCN-Regular
+          font-size: 0.15rem
+          color: #7D8497
+          letter-spacing: 0
+          text-align: center
+          margin: 0 0 0.1rem
+          padding: 0.075rem 0.27rem
+          position: relative
+          &:after
+            content: ''
+            width: 200%
+            height: 200%
+            position: absolute
+            top: 0
+            left: 0
+            border: 0.01rem solid #7D8497
+            border-radius: 0.42rem
+            transform: scale(0.5, 0.5)
+            -webkit-transform-origin: top left

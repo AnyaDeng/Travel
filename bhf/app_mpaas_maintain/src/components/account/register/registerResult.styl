@@ -1,0 +1,64 @@
+@import '../../../common/stylus/mixin.styl';
+.registerResult
+  .icon-invisible:before
+    font-size: 0.15rem
+  ul
+    padding-top 0.1rem
+    li
+      .visible
+        position absolute
+        display inline
+        right 0
+      .login
+        height 100%
+        .visible
+          .icon-invisible, .icon-visible
+            &:before
+              font-size 0.23rem
+              vertical-align middle
+        .inputBox
+          display: inline-block
+          width: 70%
+          line-height: 0.2rem
+          input.form-control
+            width: 100%
+
+    li:first-child
+      height 0.45rem
+      line-height 0.45rem
+      background #ffffff
+      padding 0 0.2rem
+      .login
+        border-top-1px(0px, #e6e6e6)
+      .loginPassword
+        font-family SourceHanSansCN-Regular;
+        color #232323
+        font-size 0.14rem
+        margin-right 0.285rem
+
+    .confirmPassword
+      height 0.45rem
+      line-height 0.45rem
+      background #ffffff
+      padding 0 0.2rem
+      .login
+        border-top-1px(1px, #e6e6e6)
+      .conPassword
+        font-family SourceHanSansCN-Regular;
+        color #232323
+        font-size 0.14rem
+        margin-right 0.285rem
+      .visible
+        .icon-invisible, .icon-visible
+          &:before
+            font-size 0.23rem
+            vertical-align middle
+    .validate-errors
+      padding-left 0.2rem
+      height 0.5rem
+  .modal-dialog
+    .modal-footer
+      .btn-active
+        border-left-1px(0px, #D2D7E0)
+
+

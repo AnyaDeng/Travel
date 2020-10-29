@@ -1,0 +1,42 @@
+.row
+  padding-top 0.1rem
+  background-color transparent
+  ul
+    li
+      height 0.43rem
+    li:last-child
+      border-bottom 0
+    .visible
+      position absolute
+      display inline
+      right 0.2rem
+      line-height 0.43rem
+      .icon-invisible,.icon-visible
+        font-size 0.23rem
+        vertical-align middle
+    .list-group-item-left
+      font-family SourceHanSansCN-Regular;
+      color #232323
+      font-size 0.14rem
+      display inline-block
+    .inputBox
+      display: inline-block
+      line-height: 0.2rem
+      width 70%
+    input
+      font-family Roboto-Regular;
+      color #232323
+      line-height 0.21rem
+    input
+      &.form-control
+        width: 76%;
+
+      &::-webkit-input-placeholder
+        font-family: SourceHanSansCN-Regular;
+        font-size 0.14rem
+        color #c6c6c6
+        letter-spacing 0
+
+.validate-errors
+  padding-left 0.2rem
+  height 0.5rem

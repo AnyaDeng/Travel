@@ -1,0 +1,17 @@
+{
+  "showStatusList":[
+    {
+      "value": "",
+      "label": "--请选择--"
+    },{
+      "value": "0",
+      "label": "初始状态"
+    },{
+      "value": "1",
+      "label": "上架"
+    },{
+      "value": "2",
+      "label": "下架"
+    }
+  ]
+}

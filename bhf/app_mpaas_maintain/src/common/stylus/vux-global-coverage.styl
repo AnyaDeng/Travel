@@ -1,0 +1,130 @@
+@import "./mixin.styl";
+/*vux-alert样式覆盖 */
+.weui-dialog
+  width: 2.55rem
+  max-width: 3rem
+  border-radius(0.105rem)
+  ::-webkit-scrollbar   //隐藏滚动条
+    display: none;
+
+.weui-dialog__bd
+  font-family: SourceHanSansCN-Normal
+  font-size: 0.14rem
+  color: #232323
+  max-height 4rem;
+  overflow-y scroll;
+  div
+    p
+      text-align: left
+
+.weui-dialog__bd:first-child
+  padding: 1.7em 20px 1.7em
+  color: #232323
+
+.weui-dialog__btn_primary
+  font-family: SourceHanSansCN-Normal
+  font-size: 0.14rem
+  color: #D5A764
+
+.weui-dialog__btn_default
+  font-family: SourceHanSansCN-Normal
+  font-size: 0.14rem
+  color: #7D8497
+
+.weui-toast
+  top: 70%
+  left: 50%
+  transform: translateX(-50%) translateY(-50%)
+  -webkit-transform: translateX(-50%) translateY(-50%)
+  background: rgba(17, 17, 17, 0.7)
+  text-align: center
+  border-radius(0.105rem)
+  color: #FFFFFF
+  &.weui-toast_text
+    .weui-toast__content
+      font-family: SourceHanSansCN-Normal
+      line-height: 0.18rem
+      font-size: 0.14rem
+      width max-content;
+      max-width 2.3rem
+      padding: 0.2rem 0.35rem !important
+      letter-spacing 0.01rem
+
+.weui-icon_toast
+  &.weui-loading
+    //margin: 0.19rem 0 0
+    width: 0.4rem
+    height: 0.4rem
+    display: inline-block
+    vertical-align: middle
+    -webkit-animation: weuiLoading 1s steps(12, end) infinite
+    animation: weuiLoading 1s steps(12, end) infinite
+    bg-image("../img/img-loading")
+
+.weui-loading_toast
+  .weui-toast
+    top: 50%
+  .weui-toast__content
+    margin-top: 0.1rem
+    margin-bottom: 0.1rem
+    font-size: 0.12rem
+    line-height: 0.16rem
+    //display: none
+
+.weui-switch, .weui-switch-cp__box
+  width: 0.45rem !important
+  height: 0.25rem !important
+
+.weui-switch:before, .weui-switch-cp__box:before
+  width: 0.45rem !important
+  height: 0.25rem !important
+
+.weui-switch:after
+  height: 0.23rem !important
+  width: 0.23rem !important
+
+.weui-switch:checked
+  border-color: #D5A764 !important
+  background-color: #D5A764 !important
+
+.vux-checker-box {
+  display inline-block
+}
+
+//banner图上的点点样式覆盖
+.swiper-container-horizontal > .swiper-pagination-bullets
+  bottom 0.23rem !important
+
+.swiper-container-bullet
+  width: 0.03rem
+  height: 0.03rem
+  display: inline-block
+  border-radius: 0.015rem
+  background: #AAB1C4
+  //opacity: 0.6
+  margin: 0 0.037rem
+
+.swiper-container-bullet-active
+  opacity 1
+  width: 0.14rem
+  height 0.03rem
+  background-color #AAB1C4
+
+.content-bullet
+  width: 0.03rem
+  height: 0.03rem
+  display: inline-block
+  border-radius: 0.015rem
+  background: #B3874A
+  //opacity: 0.6
+  margin: 0 0.037rem
+
+.content-bullet-active
+  opacity 1
+  width: 0.14rem
+  height 0.03rem
+  background-color #B3874A
+
+// 60%遮罩层样式覆盖
+.vux-popup-mask
+  background: rgba(0, 0, 0, 0.6) !important

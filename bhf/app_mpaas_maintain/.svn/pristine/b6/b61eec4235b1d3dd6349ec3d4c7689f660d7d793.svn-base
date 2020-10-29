@@ -1,0 +1,30 @@
+@import '../../common/stylus/mixin.styl';
+.row
+  .list-group
+    .list-group-item
+      height 0.43rem
+      .leftSetFont
+        font-size 0.14rem
+        font-family SourceHanSansCN-Normal
+        color #232323
+        letter-spacing 0
+      .rightSetFont
+        font-family: Roboto-Regular;
+        font-size: 0.14rem;
+        color: #232323;
+        letter-spacing: 0;
+      .icon-advance:before
+        color #7D8497
+    .list-group-item:last-child
+      border-bottom: none
+    .lineSet
+      border-bottom 0
+    .weui-cell
+      padding 0
+
+.prompting
+  padding-top 0.2rem
+
+
+
+

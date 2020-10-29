@@ -1,0 +1,198 @@
+@import "../../../common/stylus/mixin.styl";
+.container-fluid
+  .assetsHeader
+    background-image: linear-gradient(139deg, rgba(55, 93, 146, 1) 0%, rgba(16, 17, 73, 1) 100%);
+    background-size 100%
+
+    .utilList
+      padding-top 0.7rem
+      flex-wrap: wrap;
+
+    .iconFitIphoneX
+      padding-top: 1.04rem
+
+    .menuBar
+      overflow-x: hidden
+      .flex-icon
+        padding-bottom: 0.1rem;
+        .menuItem
+          display inline-block
+          width 0.27rem
+          height 0.27rem
+
+        .name
+          font-size: 0.12rem;
+          color: #CBCFDC;
+          padding-top 0.05rem
+
+      .totalAsset
+        background-color #FFFFFF
+        border-top-left-radius 0.12rem
+        border-top-right-radius 0.12rem
+        padding 0.2rem
+        width 100%
+
+        .totalAssetTitle
+          font-size 0.16rem
+          color #182136
+          padding-top 0.02rem
+          font-family SourceHanSansCN-Regular
+
+          .icon-assetVisible, .icon-assetInvisible
+            padding-left 0.06rem
+
+            &:before
+              color #000000
+              font-size 0.12rem
+
+        .amount
+          padding-top 0.1rem
+          font-size 0.23rem
+          color #C48E35
+          font-family Roboto-Regular
+
+        .benefit-old
+          color: #182136;
+          font-size: 0.12rem;
+          padding-top 0.2rem
+          font-family SourceHanSansCN-Regular
+
+          .yesterdayBenifitVal
+            width 56%
+
+          .benifitVal
+            font-family Roboto-Regular
+            font-size 0.18rem
+            color #CC924F
+            font-weight bold
+            padding-top 0.09rem
+
+  .commonModule
+    margin-top 0.1rem
+    display: flex;
+    flex-wrap: wrap;
+    background #FFFFFF
+    padding 0.15rem 0
+
+    .item
+      width 50%
+      display flex
+      justify-content center
+      align-items left
+      flex-direction: column
+      padding-left 0.2rem
+
+      .top
+        font-size 0.15rem
+        color #182136
+        font-family: SourceHanSansCN-Regular
+        padding-bottom 0.07rem
+
+        .icon-advance
+          &:before
+            color #7d8497
+            font-size 0.12rem
+
+      .center
+        font-size: 0.12rem
+        font-family: SourceHanSansCN-Regular, SourceHanSansCN
+        color: #AAB1C4
+        padding-bottom 0.07rem
+
+      .btm
+        font-size 0.18rem
+        color #CC924F
+        font-family Roboto-Regular
+
+      .bankAccountNum
+        font-size: 0.15rem;
+        font-weight bold
+        color: #182136
+
+
+    .item:first-child
+      border-right 1px solid #E6E6E6
+
+  .moreServe
+    background-color #FFFFFF
+    margin-top 0.1rem
+
+    .moreServeText
+      padding 0.15rem 0.2rem 0.1rem 0.2rem
+      font-size 0.15rem
+      color #182136
+
+    .borderLine
+      list-border-bottom-1px(1px, #e6e6e6)
+
+    .contentBox
+      flex-wrap wrap
+      padding-bottom 0.15rem
+      overflow-x: hidden
+
+      .flex-icon
+        padding-top 0.15rem
+
+        .menuItem
+          display inline-block
+          width 0.35rem
+          height 0.35rem
+
+        .name
+          font-size: 0.13rem;
+          color: #182136;
+          padding-top 0.03rem
+
+  .flex-icon
+    display: flex
+    display: -webkit-flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    -webkit-align-items: center
+    width 25%
+    height 100%
+    text-align center
+    div
+      position: relative
+      span.iconTag
+        position: absolute
+        top: 0
+        left: 70%
+        min-width: 0.09rem
+        height: 0.09rem
+        border-radius: 50%
+        background: #DF2A27
+      span.iconTagCnt
+        position: absolute
+        top: 0
+        left: 50%
+        box-sizing: border-box
+        padding: 0 0.01rem
+        height: 0.15rem
+        background-image: linear-gradient(-227deg, #FF6F6B 0%, #DF2A27 100%)
+        border-radius: 0.08rem
+        border-bottom-left-radius: 0rem
+        i
+          display: inline-block
+          min-width: 0.25rem
+          max-width: 0.64rem
+          padding: 0.02rem 0
+          overflow: hidden
+          white-space: nowrap
+          font-style: normal
+          font-family: SourceHanSansCN-Normal
+          font-size: 0.12rem
+          color: #ffffff
+          transform: scale(0.75)
+          text-overflow: ellipsis
+
+  .pageEndTag
+    padding-top 0.45rem
+
+  .icon-reminder
+    padding-left 0.06rem
+
+    &:before
+      color #9DA4B6;
+      font-size 0.11rem

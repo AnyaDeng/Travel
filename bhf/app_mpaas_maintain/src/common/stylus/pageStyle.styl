@@ -1,0 +1,1569 @@
+@font-face
+  font-family Roboto-Light
+  src url("../fontFamily/Roboto/Roboto-Light.ttf")
+
+@font-face
+  font-family Roboto-Regular
+  src url("../fontFamily/Roboto/Roboto-Regular.ttf")
+
+@font-face
+  font-family SourceHanSansCN-Regular
+  src url("../fontFamily/SourceHanSansCN/SourceHanSansCN-Regular.ttf")
+
+@font-face
+  font-family SourceHanSansCN-Medium
+  src url("../fontFamily/SourceHanSansCN/SourceHanSansCN-Medium.ttf")
+
+@font-face
+  font-family SourceHanSansCN-Normal
+  src url("../fontFamily/SourceHanSansCN/SourceHanSansCN-Normal.ttf")
+
+@font-face
+  font-family OCRAExtended
+  src url("../fontFamily/OCRAExtended.ttf")
+
+.Roboto-Light
+  font-family Roboto-Light
+
+.Roboto-Regular
+  font-family Roboto-Regular
+
+.SourceHanSansCN-Regular
+  font-family SourceHanSansCN-Regular
+
+.SourceHanSansCN-Medium
+  font-family SourceHanSansCN-Medium
+
+.SourceHanSansCN-Normal
+  font-family SourceHanSansCN-Normal
+
+.OCRAExtended
+  font-family OCRAExtended
+
+/*头部组件*/
+.header
+  color: #fff
+  width: 100%
+  height: 0.64rem
+  background: #263147
+  padding: 0 0.2rem
+  position: fixed
+  top: 0
+  left: 0
+  display: flex
+  display: -webkit-flex
+  justify-content space-between
+  -webkit-justify-content: space-between
+  align-items: flex-end
+  -webkit-align-items: flex-end
+  .headerBox
+    width: 100%
+    height: 0.44rem
+    display: flex
+    display: -webkit-flex
+    justify-content space-between
+    -webkit-justify-content: space-between
+    align-items: center
+    -webkit-align-items: center
+    [class*="icon-"]
+      font-size: 0.23rem
+      margin: 0
+    .left-cnt
+      [class*="icon-"]
+        margin-right: 0.11rem
+      a
+        span
+          font-family: SourceHanSansCN-Medium
+      .headerModule
+        display: flex
+        display: -webkit-flex
+        justify-content flex-start
+        -webkit-justify-content: flex-start
+        align-items: center
+        -webkit-align-items: center
+    .center-cnt
+      font-size: 0.18rem
+      text-align: center
+      white-space: nowrap
+      text-overflow: ellipsis
+      overflow: hidden
+
+    .right-cnt
+      text-align: right
+      color: #fff
+      [class*="icon-"]
+        margin-left: 0.11rem
+      a
+        color: #fff
+        span
+          font-family: SourceHanSansCN-Medium
+      .headerModule
+        display: flex
+        display: -webkit-flex
+        justify-content flex-end
+        -webkit-justify-content: flex-end
+        align-items: center
+        -webkit-align-items: center
+  .headerBoxWidth
+    .left-cnt
+      min-width: 25%
+    .center-cnt
+      width: 50%
+    .right-cnt
+      width: 25%
+  .headerChangePercent
+    .left-cnt
+      min-width: 15%
+    .center-cnt
+      width: 70%
+    .right-cnt
+      width: 15%
+  .headerBoxFlex
+    width: 100%
+    height: 0.44rem
+    padding-bottom: 0.13rem
+    display: flex
+    display: -webkit-flex
+    justify-content space-between
+    -webkit-justify-content: space-between
+    align-items: flex-end
+    -webkit-align-items: flex-end
+
+/*flex-布局*/
+.flex-f
+  display: flex
+  display: -webkit-flex
+
+.flex-f-i
+  display: inline-flex
+  display: -webkit-inline-flex
+
+/*--主轴水平对齐*/
+
+/*水平左对齐*/
+.flex-x-vl
+  justify-content: flex-start
+  -webkit-justify-content: flex-start
+
+/*水平居中*/
+.flex-x-vc
+  justify-content: center
+  -webkit-justify-content: center
+
+/*水平右对齐*/
+.flex-x-vr
+  justify-content flex-end
+  -webkit-justify-content: flex-end
+
+/*水平左右对齐*/
+.flex-x-vsb
+  justify-content space-between
+  -webkit-justify-content: space-between
+
+/*水平左右对齐（有间距）*/
+.flex-x-vsr
+  justify-content: space-around
+  -webkit-justify-content: space-around
+
+/*--垂直对齐*/
+.flex-ht
+  align-items: flex-start
+  -webkit-align-items: flex-start
+
+/*垂直居中*/
+.flex-hc
+  align-items: center
+  -webkit-align-items: center
+
+.flex-hb
+  align-items: flex-end
+  -webkit-align-items: flex-end
+
+/*垂直等高*/
+.flex-hs
+  align-items: stretch
+  -webkit-align-items: stretch
+
+.flex-hl
+  align-items: baseline
+  -webkit-align-items: baseline
+
+/*--侧轴水平对齐*/
+.flex-y-vl
+  align-content: flex-start
+  -webkit-align-content: flex-start
+
+.flex-y-vc
+  align-content: center
+  -webkit-align-content: center
+
+.flex-y-vr
+  align-content: flex-end
+  -webkit-align-content: flex-end
+
+.flex-y-vsb
+  align-content: space-between
+  -webkit-align-content: space-between
+
+.flex-y-vsr
+  align-content: space-around
+  -webkit-align-content: space-around
+
+/*--换行*/
+.flex-ht-self
+  align-self: flex-start
+
+.flex-hc-self
+  align-self: center
+
+.flex-hb-self
+  align-self: flex-end
+
+.flex-noWrap
+  flex-wrap: nowrap
+
+.flex-wrap
+  flex-wrap: wrap
+
+.flex-wrapReverse
+  flex-wrap: wrap-reverse
+
+/*主轴方向*/
+.flex-dir-r
+  flex-direction: row
+
+.flex-dir-rr
+  flex-direction: row-reverse
+
+.flex-dir-c
+  flex-direction: column
+
+.flex-dir-cr
+  flex-direction: column-reverse
+
+/*flex-grow*/
+.flex-g1
+  flex-grow: 1
+
+.flex-g2
+  flex-grow: 2
+
+/*flex END*/
+.mg_la
+  margin-left: auto
+
+/*全局公共样式 */
+html,
+body
+  position: relative
+  width: 100%
+  height: 100%
+  background-color: #fff
+
+body
+  color: #666
+  font-size: 0.14rem
+  font-family: -apple-system, system-ui, "PingFang SC", "PingFang TC", "PingFang HK", "Source Han Sans TC", "Source Han Sans SC", Roboto, Helvetica, "Helvetica Neue";
+  padding-top: constant(safe-area-inset-top)
+  padding-bottom: constant(safe-area-inset-bottom)
+
+div
+  box-sizing: border-box
+
+input,
+textarea,
+button
+  outline: none
+  border: none
+  box-shadow: none
+  -webkit-box-shadow: none
+
+ul
+  list-style: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+input
+  &::-webkit-input-placeholder
+    color: #b8b8b8
+  &:-ms-input-placeholder
+    color: #b8b8b8
+  &::-moz-placeholder
+    color: #b8b8b8
+  &.errMsg
+    &::-webkit-input-placeholder
+      color: #e4393c
+    &:-ms-input-placeholder
+      color: #e4393c
+
+input
+  &.errMsg
+    &::-moz-placeholder
+      color: #e4393c
+
+/*解决vue闪现*/
+[v-cloak]
+  display: none
+
+.animated
+  animation-duration: 0.3s
+  animation-fill-mode: none
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+  100% {
+    opacity: 1
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+  100% {
+    opacity: 1
+  }
+}
+
+.full-support
+  width: 100%
+  height: 100%
+  padding: 0.64rem 0.15rem 0
+
+.full-support_npd
+  width: 100%
+  height: 100%
+  padding-top: 0.64rem
+
+/*清除浮动*/
+.clear
+  &:before
+    content: ""
+    display: table
+    clear: both
+
+  &:after
+    content: ""
+    display: table
+    clear: both
+
+.displayNone
+  display: none
+
+.displayNoneClear
+  display: block
+
+.displayInline
+  display: inline
+
+/*定位*/
+.fixed
+  position: fixed
+
+.relative
+  position: relative
+
+.absolute
+  position: absolute
+
+.inherit
+  position: inherit
+
+.hidden
+  display: none
+
+/*左右居中*/
+.textAlign
+  text-align: center
+
+.marginAuto
+  margin: auto
+
+/*上下居中*/
+.lineHeight_0
+  line-height: 0
+
+.lineHeight_015
+  line-height: 0.15rem
+
+.lineHeight_020
+  line-height: 0.20rem
+
+.lineHeight_031
+  line-height: 0.31rem
+
+.lineHeight_044
+  line-height: 0.44rem
+
+.lineHeight_045
+  line-height: 0.45rem
+
+.lineHeight_053
+  line-height: 0.53rem
+
+.lineHeight_0535
+  line-height: 0.535rem
+
+/*内外边距*/
+.margin_top002
+  margin-top: 0.02rem
+
+.margin_top004
+  margin-top: 0.04rem
+
+.margin_top20
+  margin-top: 0.2rem
+
+.margin_top50
+  margin-top: 0.5rem
+
+.margin_top115
+  padding-top: 0.115rem
+
+.margin_top10
+  margin-top: 0.1rem
+
+.margin_right2
+  margin-right: 0.2rem
+
+.margin_right1
+  margin-right: 0.1rem
+
+.margin_bottom1
+  margin-bottom: 0.1rem
+
+.margin_bottom2
+  margin-bottom: 0.2rem
+
+.padding_lr15
+  padding: 0 0.15rem
+
+.border_n
+  border: none
+
+.borderTop
+  border-top: 0.005rem solid #e5e5e5
+
+.borderBottom
+  border-bottom: 0.005rem solid #e5e5e5
+
+.rotate30
+  display: inline-block
+  transform: rotate(-30deg)
+
+/*浮动*/
+.floatLeft
+  float: left
+
+.floatRight
+  float: right
+
+/*宽和高*/
+.width_345
+  width: 3.45rem
+
+.width_335
+  width: 3.35rem
+
+.width_334
+  width: 3.34rem
+
+.width_321
+  width: 3.21rem
+
+.width_3
+  width: 3rem
+
+.width_242
+  width: 2.42rem
+
+.width_245
+  width: 2.45rem
+
+.width_196
+  width: 1.96rem
+
+.width_140
+  width: 1.4rem
+
+.width_115
+  width: 1.15rem
+
+.width_1
+  width: 1rem
+
+.width_06
+  width: 0.6rem
+
+.width_022
+  width: 0.22rem
+
+.width_100
+  width: 100%
+
+.width_50
+  width: 50%
+
+.width_16
+  width: 16%
+
+.width_80
+  width: 80%
+
+.width_90
+  width: 90%
+
+.width_98
+  width: 98%
+
+.height_019
+  height: 0.19rem
+
+.height_020
+  height: 0.2rem
+
+.height_027
+  height: 0.27rem
+
+.height_031
+  height: 0.31rem
+
+.height_040
+  height: 0.4rem
+
+.height_041
+  height: 0.41rem
+
+.height_044
+  height: 0.44rem
+
+.height_045
+  height: 0.45rem
+
+.height_050
+  height: 0.5rem
+
+.height_053
+  height: 0.53rem
+
+.height_070
+  height: 0.7rem
+
+.height_1
+  height: 1rem
+
+.height_106
+  height: 1.065rem
+
+.height_110
+  height: 1.10rem
+
+.height_128
+  height: 1.28rem
+
+.height_154
+  height: 1.54rem
+
+.height_160
+  height: 1.6rem
+
+.height_291
+  height: 2.915rem
+
+.height_360
+  height: 3.6rem
+
+.height_469
+  height: 4.69rem
+
+.height_100
+  height: 100%
+
+.height_98
+  height: 90%
+
+/*背景颜色*/
+.backgroundTransparent
+  background-color: transparent
+
+.background_f1
+  background: #f1f5f8
+
+.background_ff
+  background: #ffffff
+
+.background_26
+  background: #263147
+
+.background_AC
+  background: #acafb8
+
+.background_D5
+  background: d7ab69
+
+.background_D2
+  background: #d2d7e0
+
+.background_00
+  background: #000000
+
+/*字体颜色*/
+.color_fff
+  color: #ffffff
+
+.color_000
+  color: #000000
+
+.color_23
+  color: #232323
+
+.color_B4
+  color: #b4873d
+
+.color_60
+  color: #6098de
+
+.color_b8
+  color: #b8b8b8
+
+.color_7D
+  color: #7d8497
+
+.color_F2
+  color: #f2f2f2
+
+.color_D5
+  color: #d5a764
+
+.color_BA
+  color: #ba964e
+
+.color_B1
+  color: #b1b4bc
+
+.color_D2
+  color: #d2d7e0
+
+.color_FF6
+  color: #ff6c00
+
+.color_7D8
+  color: #7d8395
+
+.red
+  color: #f56361
+
+/*字号*/
+.fontSize_010
+  font-size: 0.1rem
+
+.fontSize_012
+  font-size: 0.12rem
+
+.fontSize_014
+  font-size: 0.14rem
+
+.fontSize_015
+  font-size: 0.15rem
+
+.fontSize_016
+  font-size: 0.16rem
+
+.fontSize_018
+  font-size: 0.18rem
+
+.fontSize_024
+  font-size: 0.24rem
+
+.fontSize_030
+  font-size: 0.3rem
+
+/*内外边距*/
+.padding_0
+  padding: 0
+
+.marginTop_002
+  margin-top: 0.02rem
+
+.marginTop_003
+  margin-top: 0.03rem
+
+.marginTop_010
+  margin-top: 0.1rem
+
+.marginTop_011
+  margin-top: 0.11rem
+
+.marginTop_029
+  margin-top: 0.29rem !important
+
+.marginTop_012
+  margin-top: 0.12rem !important
+
+.marginTop_016
+  margin-top: 0.16rem
+
+.marginTop_019
+  margin-top: 0.19rem
+
+.marginTop_020
+  margin-top: 0.2rem
+
+.marginTop_022
+  margin-top: 0.22rem
+
+.marginTop_030
+  margin-top: 0.3rem
+
+.marginTop_045
+  margin-top: 0.45rem
+
+.marginTop_050
+  margin-top: 0.5rem
+
+.marginTop_032
+  margin-top: 0.32rem
+
+.marginTop_043
+  margin-top: 0.43rem
+
+.marginTop_107
+  margin-top: 1.07rem
+
+.marginTop_137
+  margin-top: 1.37rem
+
+.marginTop_178
+  margin-top: 1.78rem
+
+.marginTop_264
+  margin-top: 2.64rem
+
+.marginBottom_001
+  margin-bottom: 0.01rem
+
+.marginBottom_005
+  margin-bottom: 0.05rem
+
+.marginBottom_010
+  margin-bottom: 0.1rem
+
+.marginBottom_013
+  margin-bottom: 0.12rem
+
+.marginBottom_018
+  margin-bottom: 0.18rem
+
+.marginBottom_019
+  margin-bottom: 0.19rem
+
+.marginBottom_032
+  margin-bottom: 0.32rem
+
+.marginBottom_0375
+  margin-bottom: 0.375rem
+
+.marginBottom_042
+  margin-bottom: 0.42rem
+
+.marginBottom_130
+  margin-bottom: 1.3rem
+
+.marginLeft_10
+  margin-left: 10%
+
+.marginLeft_007
+  margin-left: 0.07rem
+
+.marginLeft_011
+  margin-left: 0.11rem
+
+.marginLeft_020
+  margin-left: 0.2rem
+
+.marginLeft_043
+  margin-left: 0.435rem
+
+.marginLeft_063
+  margin-left: 0.63rem
+
+.marginLeft_084
+  margin-left: 0.84rem
+
+.marginLeft_006
+  margin-left: 0.06rem
+
+.marginRight_006
+  margin-right: 0.06rem
+
+.marginRight_020
+  margin-right: 0.2rem
+
+.marginRight_0195
+  margin-right: 0.195rem
+
+.marginRight_063
+  margin-right: 0.63rem
+
+.marginRight_030
+  margin-right: 0.3rem
+
+.marginRight_040
+  margin-right: 0.4rem
+
+.paddingTop_011
+  padding-top: 0.115rem
+
+.paddingTop_010
+  padding-top: 0.1rem
+
+.paddingTop_019
+  padding-top: 0.19rem
+
+.paddingTop_045
+  padding-top: 0.45rem
+
+.paddingLeft_006
+  padding-left: 0.06rem
+
+.paddingLeft_010
+  padding-left: 0.1rem
+
+.paddingLeft_015
+  padding-left: 0.15rem
+
+.paddingLeft_019
+  padding-left: 0.19rem
+
+.paddingLeft_020
+  padding-left: 0.2rem
+
+.paddingRight_015
+  padding-right: 0.15rem
+
+/*内外边线*/
+.border_02
+  border: 2px solid #7d8497
+
+.border_02CB
+  border: 2px solid #cbd0d9
+
+.border_00
+  border-right: 2px solid #cbd0d9
+
+.borderRight_00
+  border-right: 1px solid
+
+.border_D5
+  border: 1px solid #d5a764
+
+.borderNone
+  border: none
+
+.outlineMedium
+  outline: medium
+
+.bottom
+  bottom: 0
+
+.bottom_030
+  bottom: 0.3rem
+
+.borderTop_b8
+  border-top: 1px solid #b8b8b8
+
+.borderLeft_b8
+  border-left: 1px solid #b8b8b8
+
+.borderBottom_7D
+  border-bottom: 1px solid #7d8497
+
+/*左右距离*/
+.right_0
+  right: 0
+
+.right_020
+  right: 0.2rem
+
+/*圆角*/
+.borderRadius_100
+  border-radius: 100px
+
+.borderRadius_10
+  border-radius: 10px
+
+/*透明度*/
+.opacity_03
+  opacity: 0.3
+
+.opacity_07
+  opacity: 0.7
+
+/*层级*/
+.zIndex_1
+  z-index: 10000
+
+.zIndex_2
+  z-index: 1000000
+
+/*字体*/
+.fontFamilyRob
+  font-family: Roboto-Regular
+
+.fontFamilyMedium
+  font-family: SourceHanSansCN-Medium
+
+.fontFamilyRegular
+  font-family: SourceHanSansCN-Regular
+
+/*页面样式*/
+.absolutes
+  position: absolute !important
+
+input
+  &::-webkit-input-placeholder
+    font-size: 0.18rem
+    color: #7d8497
+    letter-spacing: 0
+  &.phone
+    &::-webkit-input-placeholder
+      font-size: 0.14rem
+      color: #c6c6c6
+      letter-spacing: 0
+
+.bottoms
+  margin: auto
+  border-bottom: 1px solid #E6E6E6
+  width: 90%
+
+.background
+  background-image: linear-gradient(-227deg, #EBC678 0%, #D7AB69 100%)
+  box-shadow: 0 4px 8px 0 rgba(213, 167, 100, 0.30)
+  border-radius: 0.5rem
+
+.borderBottoms
+  border-bottom-1px(1px, #F56361)
+
+.borderBottomsMobile
+  border-bottom-1px(1px, #F56361)
+
+.borderBottomsPwd
+  border-bottom-1px(1px, #F56361)
+
+.border_00F5
+  border: 2px solid #F56361
+
+.borderRight_00F5
+  border-right: 2px solid #F56361
+
+/*页面公共样式-------------->*/
+.flex
+  display: flex
+  display: -webkit-flex
+
+/*上下居中右对齐*/
+.flex-center-right
+  display: flex
+  display: -webkit-flex
+  justify-content flex-end
+  -webkit-justify-content: flex-end
+  align-items: center
+  -webkit-align-items: center
+
+/*上下居中左右居中*/
+.flex-center-center
+  display: flex
+  display: -webkit-flex
+  justify-content: center
+  -webkit-justify-content: center
+  align-items: center
+  -webkit-align-items: center
+
+/*上下居中左对齐*/
+.flex-center-left
+  display: flex
+  display: -webkit-flex
+  justify-content: flex-start
+  -webkit-justify-content: flex-start
+  align-items: center
+  -webkit-align-items: center
+
+/*上下居中两端对齐*/
+.flex-center-leftRight
+  display: flex
+  display: -webkit-flex
+  justify-content space-between
+  -webkit-justify-content: space-between
+  align-items: center
+  -webkit-align-items: center
+
+/*上下居中两端对齐（有间距）*/
+.flex-center-leftSpaceRight
+  display: flex
+  display: -webkit-flex
+  justify-content: space-around
+  -webkit-justify-content: space-around
+  align-items: center
+  -webkit-align-items: center
+
+/*主轴:Y Y:上对齐 X:居中*/
+.flex-y-top-center
+  display: flex
+  display: -webkit-flex
+  flex-direction: column
+  justify-content: flex-start
+  align-items: center
+  -webkit-align-items: center
+  width 100%
+  height 100%
+
+/*主轴:Y Y:上对齐 X:左对齐*/
+.flex-y-top-left
+  display: flex
+  display: -webkit-flex
+  flex-direction: column
+  justify-content: flex-start
+  align-items: flex-start
+  -webkit-align-items: flex-start
+  width 100%
+  height 100%
+
+/*主轴:Y Y:居中 X:左对齐*/
+.flex-y-center-left
+  display: flex
+  display: -webkit-flex
+  flex-direction: column
+  justify-content: center
+  align-items: flex-start
+  -webkit-align-items: flex-start
+  width 100%
+  height 100%
+
+/*主轴:Y Y上下对齐 X:居中*/
+.flex-y-topBottom-center
+  display: flex
+  display: -webkit-flex
+  flex-direction: column
+  justify-content: space-between
+  align-items: center
+  -webkit-align-items: center
+  width 100%
+  height 100%
+
+/*主轴:Y Y:居中 X:居中*/
+.flex-y-center-center
+  display: flex
+  display: -webkit-flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  -webkit-align-items: center
+  width 100%
+  height 100%
+
+/*页面组件外层容器 */
+.container-fluid
+  width: 100%
+  height: 100%
+  background: #f7f7f9
+
+.row
+  width: 100%
+  margin-bottom: 0.1rem
+  background: #fff
+
+.scroll-list
+  position: relative
+  background: #f7f7f9
+
+.row-topMove
+  margin-top: -0.1rem
+
+.list-header
+  display: flex
+  display: -webkit-flex
+  justify-content space-between
+  -webkit-justify-content: space-between
+  align-items: center
+  -webkit-align-items: center
+  padding: 0.15rem 0.2rem 0.15rem 0.2rem
+  .list-header-title
+    span
+      color: #232323
+      font-size: 0.16rem
+      font-family: SourceHanSansCN-Medium
+    span.blockIcon
+      display: inline-block
+      width: 0.03rem
+      height: 0.13rem
+      background: #DDC792
+      margin-right: 0.12rem
+  .list-header-link
+    a
+      span
+        font-family: SourceHanSansCN-Regular
+        color: #7D8497
+        font-size: 0.12rem
+        margin: 0 0 0 0.09rem
+
+.list-group
+  //padding: 0 0.2rem
+  background: #fff
+
+.list-group-item
+  display: flex
+  display: -webkit-flex
+  justify-content space-between
+  -webkit-justify-content: space-between
+  align-items: center
+  -webkit-align-items: center
+  width: 100%
+  font-size 0.14rem
+  padding: 0 0.2rem;
+  box-sizing: border-box;
+  list-border-bottom-1px(1px, #e6e6e6)
+
+//border-bottom-1px(1px, #e6e6e6)
+
+.list-group-item:last-child
+  list-border-bottom-1px(0, #e6e6e6)
+
+//border-bottom-1px(0px, #e6e6e6)
+
+.form-border
+  border-bottom-1px(1px, #7d8497)
+  opacity: 0.3
+
+input
+  &.form-control
+    //height 90%
+    height auto
+    overflow: hidden
+    width: 70%
+    color: #232323
+    font-size: 0.14rem
+    font-family: SourceHanSansCN-Regular
+    &::-webkit-input-placeholder
+      font-family: SourceHanSansCN-Regular
+      font-size 0.14rem
+      color #c6c6c6
+      letter-spacing 0
+
+.validate-errors
+  margin: 0.04rem 0.05rem 0.04rem
+  span
+    font-size: 0.12rem
+    color: #F56361
+
+.validate-errors-border
+  border-bottom 0.005rem solid #f56361
+  opacity 1
+
+.btn-container
+  display: flex
+  display: -webkit-flex
+
+.btn-success
+  width: 100%
+  text-align: center
+  line-height: 0.45rem
+  height: 0.45rem
+  background-image: linear-gradient(-227deg, #EBC678 0%, #D7AB69 100%)
+  border-radius: 0.5rem
+  margin 0.15rem
+  font-family: SourceHanSansCN-Medium;
+  span
+    color: #ffffff
+    font-size: 0.16rem
+    font-family: SourceHanSansCN-Medium
+
+/*圆角按钮*/
+.btn-radius
+  width: 100%
+  text-align: center
+  line-height: 0.45rem
+  height: 0.45rem
+  background-image: linear-gradient(-227deg, #EBC678 0%, #D7AB69 100%)
+  border-radius: 0.5rem
+  margin 0.15rem
+  span
+    color: white
+    font-size: 0.16rem
+    font-family: SourceHanSansCN-Medium;
+
+/*圆角按钮-镂空背景色*/
+.btn-radius-hollow
+  width: 100%
+  text-align: center
+  line-height: 0.45rem
+  height: 0.45rem
+  border 0.01rem solid #D5A764
+  border-radius: 0.5rem
+  margin 0.15rem 0
+  span
+    color: #D5A764
+    font-size: 0.16rem
+    font-family: SourceHanSansCN-Medium;
+
+.btn-link
+  display: flex
+  display: -webkit-flex
+  justify-content: center
+  -webkit-justify-content: center
+  align-items: center
+  -webkit-align-items: center
+  flex-grow: 1
+  a
+    font-family: SourceHanSansCN-Medium
+    font-size: 0.12rem
+    span
+      font-size: 0.12rem
+      font-family: SourceHanSansCN-Regular
+
+/*按钮置灰禁用*/
+.button
+  &.disabled
+    background: #acafb8
+    pointer-events: none
+    box-shadow: none
+
+.disabled
+  background: #acafb8
+  pointer-events: none
+  box-shadow: none
+
+/*字体图标设置*/
+.icon-advance
+  font-size: 0.13rem
+  margin-left: 0.09rem
+
+/*设置交易密码键盘样式*/
+keyBox
+.passTitle
+  width: 100%
+  text-align: center
+  padding: 0.14rem 0 0.3rem 0
+  font-size: 0.14rem
+  color: #7D8497
+
+.passWordCircular
+  display: inline-block
+  width: 10px
+  height: 10px
+  background: #D5A764
+  border-radius: 50%
+
+/*.passWordBasketBox
+  margin: auto
+  width: 3.21rem
+  height: 0.535rem
+  border-top-bottom-1px(1px, #CBD0D9)
+
+.passWordBasket
+  width: 0.535rem
+  border-right-1px(1px,  #CBD0D9)
+  height: 0.522rem
+  float: left
+  box-sizing: border-box
+
+.passWordBasketChoice
+  width: 0.535rem
+  height: 0.522rem
+  float: left
+  box-sizing: border-box
+
+.passWordBasket:first-child
+  border-left-right-1px(1px,  #CBD0D9)
+  width: 0.535rem*/
+
+.keyStyle
+  background: #ffffff
+  tr
+    display: flex
+    display: -webkit-flex
+    justify-content: center
+    -webkit-justify-content: center
+    align-items: center
+    -webkit-align-items: center
+    border-top-1px(1px, #D2D7E0)
+    td
+      height: 0.5rem
+      display: flex
+      display: -webkit-flex
+      justify-content: center
+      -webkit-justify-content: center
+      align-items: center
+      -webkit-align-items: center
+      flex-grow: 1
+      border-right-1px(1px, #D2D7E0)
+    td:last-child
+      border-right-1px(0px, #D2D7E0)
+  tr:last-child
+    background: #D2D7E0
+    td
+      background: #ffffff
+
+/*多倍背景图*/
+/*已满标*/
+.img-fullScale
+  width: 0.45rem
+  height: 0.45rem
+  bg-image('../img/img-fullScale')
+
+/*已过期*/
+.img-overdue
+  width: 0.45rem
+  height: 0.45rem
+  bg-image('../img/img-overdue')
+
+/*已使用*/
+.img-alreadyUsed
+  width: 0.45rem
+  height: 0.45rem
+  bg-image('../img/img-alreadyUsed')
+/* 已售罄*/
+.img-soldOut
+  width: 0.45rem
+  height: 0.45rem
+  bg-image('../img/img-soldOut')
+
+/*暂无在售和预热产品*/
+.noProduct
+  display: flex
+  display: -webkit-flex
+  justify-content center
+  -webkit-justify-content: center
+  align-items: center
+  -webkit-align-items: center
+  flex-direction: column
+
+.img-noProduct
+  width: 1.32rem
+  height: 1.095rem
+  bg-image('../img/img-noProduct')
+  margin-top: 0.495rem
+
+.warn-noProduct
+  display: flex
+  display: -webkit-flex
+  justify-content: center
+  -webkit-justify-content: center
+  align-items: center
+  -webkit-align-items: center
+  flex-direction: column
+  margin: 0.285rem 0 0.4rem
+  span
+    font-family: SourceHanSansCN-Regular
+    font-size: 0.15rem
+    color: #7D8497
+    letter-spacing: 0
+    text-align: center
+    margin: 0 0 0.1rem
+  span.tab-link
+    color: #6098de
+    margin: 0
+    border-bottom: 0.01rem solid #6098de
+
+
+//爱心鸿运来 心形跳动动画
+@keyframes  donateRotate
+{
+  0% {
+    transform translateY(0px)
+  }
+
+  25%{
+    transform translateY(-2px)
+  }
+
+  50%{
+    transform translateY(0px)
+  }
+
+  75%{
+    transform translateY(-1px)
+  }
+
+  100% {
+    transform translateY(0px)
+  }
+
+}
+
+
+/*银行卡图标*/
+span.bankIcon
+  display: inline-block
+  width: 0.14rem
+  height: 0.14rem
+  margin: 0
+  background-position: center
+
+.bankIcon002 //中国工商银行
+  bg-image ('../img/banks/bank_gs_002') no-repeat
+  background-size: contain
+
+.bankIcon934 //邮政储蓄银行
+  bg-image ('../img/banks/bank_yz_934') no-repeat
+  background-size: contain
+
+.bankIcon003 //中国农业银行
+  bg-image ('../img/banks/bank_ny_003') no-repeat
+  background-size: contain
+
+.bankIcon004 //中国银行
+  bg-image ('../img/banks/bank_zg_004') no-repeat
+  background-size: contain
+
+.bankIcon005 //中国建设银行
+  bg-image ('../img/banks/bank_js_005') no-repeat
+  background-size: contain
+
+.bankIcon006 //中国交通银行
+  bg-image ('../img/banks/bank_jt_006') no-repeat
+  background-size: contain
+
+.bankIcon932 //中信银行
+  bg-image ('../img/banks/bank_zx_932') no-repeat
+  background-size: contain
+
+.bankIcon009 //光大银行
+  bg-image ('../img/banks/bank_gd_009') no-repeat
+  background-size: contain
+
+.bankIcon012 //华夏银行
+  bg-image ('../img/banks/bank_hx_012') no-repeat
+  background-size: contain
+
+.bankIcon014 //民生银行
+  bg-image ('../img/banks/bank_ms_014') no-repeat
+  background-size: contain
+
+.bankIcon016 //广东发展银行
+  bg-image ('../img/banks/bank_gf_016') no-repeat
+  background-size: contain
+
+.bankIcon920 //平安银行
+  bg-image ('../img/banks/bank_pa_920') no-repeat
+  background-size: contain
+
+.bankIcon007 //招商银行
+  bg-image ('../img/banks/bank_zs_007') no-repeat
+  background-size: contain
+
+.bankIcon020 //兴业银行
+  bg-image ('../img/banks/bank_xy_020') no-repeat
+  background-size: contain
+
+.bankIcon011 //上海浦东发展银行
+  bg-image ('../img/banks/bank_pf_011') no-repeat
+  background-size: contain
+
+.bankCardBg005
+  bg-image ('../img/banks/bankCardLogo_005') no-repeat
+  background-position: right
+  background-size: contain
+
+.bankIcon008 //北京银行
+  bg-image ('../img/banks/bank_bj_008') no-repeat
+  background-size: contain
+
+.bankIcon017 //上海银行
+  bg-image ('../img/banks/bank_sh_017') no-repeat
+  background-size: contain
+
+.bankIcon028 //宁波银行
+  bg-image ('../img/banks/bank_nb_028') no-repeat
+  background-size: contain
+
+.bankIcon904 //南京银行
+  bg-image ('../img/banks/bank_nj_904') no-repeat
+  background-size: contain
+
+.bankIcon913 //青岛银行
+  bg-image ('../img/banks/bank_qd_913') no-repeat
+  background-size: contain
+
+.bankIcon947 //北京农商银行
+  bg-image ('../img/banks/bank_ns_947') no-repeat
+  background-size: contain
+
+.bankIcon997 //蓝海银行
+  bg-image ('../img/banks/bank_lh_997') no-repeat
+  background-size: contain
+
+.bankIcon998 //苏宁
+  bg-image ('../img/banks/bank_sn_998') no-repeat
+  background-size: contain
+
+.bankIcon915 //浙商
+  bg-image ('../img/banks/bank_zs_915') no-repeat
+  background-size: contain
+
+.bankIcon940 //百信
+  bg-image ('../img/banks/bank_bx_940') no-repeat
+  background-size: contain
+
+.bankIcon911 //杭州银行
+  bg-image ('../img/banks/bank_hz_911') no-repeat
+  background-size: contain
+
+.bankIcon013 //深圳发展
+  bg-image ('../img/banks/bank_sf_013') no-repeat
+  background-size: contain
+
+.bankIcon019 //上海农业商业
+  bg-image ('../img/banks/bank_sn_019') no-repeat
+  background-size: contain
+
+.bankIcon018 //深圳商业银行
+  bg-image ('../img/banks/bank_ss_018') no-repeat
+  background-size: contain
+
+.bankIcon025 //天津银行
+  bg-image ('../img/banks/bank_tj_025') no-repeat
+  background-size: contain
+
+.bankIcon941 //恒丰
+  bg-image ('../img/banks/bank_hf_941') no-repeat
+  background-size: contain
+
+.bankIcon938 //泊海
+  bg-image ('../img/banks/bank_bh_938') no-repeat
+  background-size: contain
+
+.bankIcon000
+  bg-image ('../img/banks/bank_default') no-repeat !important
+  background-size: contain
+
+.bankIcon_others
+  bg-image ('../img/banks/bank_others') no-repeat !important
+  background-size: contain
+
+.background
+  z-index -1
+
+.view
+  z-index 0
+
+.window
+  z-index 10
+
+.alert
+  z-index 100
+
+//按钮点击置灰效果用类名
+
+.btnStyle
+  background-image: linear-gradient(-227deg, #e6e6e6 0%, #e6e6e6 100%) !important
+
+//判断设备型号 -- 标签样式
+.lableClassOppo
+  padding-top: 0.03rem!important
+
+
+

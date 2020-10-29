@@ -1,0 +1,216 @@
+mainColor = #D7A853
+
+mainColorSub = #DCC996
+
+subsidiaryColor = #263147
+
+orangeColor = #FF6C00
+greyColor = #B2B6BC
+
+bg-image($url)
+  background-size contain
+  background-repeat no-repeat
+  background-image url($url + "@2x.png")
+  @media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio)
+    background-image url($url + "@3x.png")
+
+border-radius(values)
+  -webkit-border-radius: values
+  -moz-border-radius: values
+  border-radius: values
+
+@media (-webkit-min-device-pixel-ratio: 1.5),(min-device-aspect-ratio: 1.5) {
+  //上下边线配置
+  .list-group-item, .list-group ul, .list-group ul .listFilterModule, .photo li, ul li div.login, .list-group li, .keyStyle tr, .basketBox, .passWordBasketBox, .topTitleBorder, .popupScreen .scroller-indicator, .popupScreen .list-group-item-clear, .modal-footer, .bindBankCard .borderLine, .fullName, .borderBottoms, .borderBottomsMobile, .borderBottomsPwd, .captcha, .registerResult .login, .form-border, .strListBottom, .item_selected, item_selected_border, .lineAdapter, .current .content .tabBar .buttons-tab div, .loadMore, .listShowCtrl {
+    &:before, &:after {
+      transform: scaleY(0.7); //1.5 * 0.7接近1
+    }
+  }
+
+  //左右边线配置
+  a.btn-default, a.btn-active, .keyStyle tr td, .passWordBasket, .popupScreen .checker-default {
+    &:before, &:after {
+      transform: scaleX(0.7); //1.5 * 0.7接近1
+    }
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),(min-device-aspect-ratio: 2) {
+  //上下边线配置
+  .list-group-item, .list-group ul, .list-group ul .listFilterModule, .photo li, ul li div.login, .list-group li, .keyStyle tr, .basketBox, .passWordBasketBox, .topTitleBorder, .popupScreen .scroller-indicator, .popupScreen .list-group-item-clear, .modal-footer, .bindBankCard .borderLine, .fullName, .borderBottoms, .borderBottomsMobile, .borderBottomsPwd, .captcha, .registerResult .login, .form-border, .strListBottom, .item_selected, item_selected_border, .lineAdapter, .current .content .tabBar .buttons-tab div, .loadMore, .listShowCtrl {
+    &:before, &:after {
+      transform: scaleY(0.5); //1.5 * 0.7接近1
+    }
+  }
+
+  //左右边线配置
+  a.btn-default, a.btn-active, .keyStyle tr td, .passWordBasket, .popupScreen .checker-default {
+    &:before, &:after {
+      transform: scaleX(0.5); //2 * 0.5 = 1
+    }
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2.5),(min-device-aspect-ratio: 2.5) {
+  //上下边线配置
+  .list-group-item, .list-group ul, .list-group ul .listFilterModule, .photo li, ul li div.login, .list-group li, .keyStyle tr, .basketBox, .passWordBasketBox, .topTitleBorder, .popupScreen .scroller-indicator, .popupScreen .list-group-item-clear, .modal-footer, .bindBankCard .borderLine, .fullName, .borderBottoms, .borderBottomsMobile, .borderBottomsPwd, .captcha, .registerResult .login, .form-border, .strListBottom, .item_selected, item_selected_border, .lineAdapter, .current .content .tabBar .buttons-tab div, .loadMore, .listShowCtrl {
+    &:before, &:after {
+      transform: scaleY(0.4); //1.5 * 0.7接近1
+    }
+  }
+
+  //左右边线配置
+  a.btn-default, a.btn-active, .keyStyle tr td, .passWordBasket, .popupScreen .checker-default {
+    &:before, &:after {
+      transform: scaleX(0.4); //2 * 0.5 = 1
+    }
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 3),(min-device-aspect-ratio: 3) {
+  //上下边线配置
+  .list-group-item, .list-group ul, .list-group ul .listFilterModule, .photo li, ul li div.login, .list-group li, .keyStyle tr, .basketBox, .passWordBasketBox, .topTitleBorder, .popupScreen .scroller-indicator, .popupScreen .list-group-item-clear, .modal-footer, .bindBankCard .borderLine, .fullName, .borderBottoms, .borderBottomsMobile, .borderBottomsPwd, .captcha, .registerResult .login, .form-border, .strListBottom, .item_selected, item_selected_border, .lineAdapter, .current .content .tabBar .buttons-tab div, .loadMore, .listShowCtrl {
+    &:before, &:after {
+      transform: scaleY(0.333); //1.5 * 0.7接近1
+    }
+  }
+
+  //左右边线配置
+  a.btn-default, a.btn-active, .keyStyle tr td, .passWordBasket, .popupScreen .checker-default {
+    &:before, &:after {
+      transform: scaleX(0.333); //2 * 0.5 = 1
+    }
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 3.5),(min-device-aspect-ratio: 3.5) {
+  //上下边线配置
+  .list-group-item, .list-group ul, .list-group ul .listFilterModule, .photo li, ul li div.login, .list-group li, .keyStyle tr, .basketBox, .passWordBasketBox, .topTitleBorder, .popupScreen .scroller-indicator, .popupScreen .list-group-item-clear, .modal-footer, .bindBankCard .borderLine, .fullName, .borderBottoms, .borderBottomsMobile, .borderBottomsPwd, .captcha, .registerResult .login, .form-border, .strListBottom, .item_selected, item_selected_border, .lineAdapter, .current .content .tabBar .buttons-tab div, .loadMore, .listShowCtrl {
+    &:before, &:after {
+      transform: scaleY(0.2857); //1.5 * 0.7接近1
+    }
+  }
+
+  //左右边线配置
+  a.btn-default, a.btn-active, .keyStyle tr td, .passWordBasket, .popupScreen .checker-default {
+    &:before, &:after {
+      transform: scaleX(0.2857); //2 * 0.5 = 1
+    }
+  }
+}
+
+border-top-1px($height, $color)
+  position relative
+  &:before
+    display block
+    position: absolute;
+    left: 0
+    top: 0
+    width: 100%
+    border-top: $height solid $color
+    content: ''
+    z-index: 1
+
+border-bottom-1px($height, $color)
+  position relative
+  &:after
+    display block
+    position: absolute;
+    left: 0
+    bottom: 0
+    width: 100%
+    border-top: $height solid $color
+    content: ''
+    z-index: 1
+
+// 产品列表引用底线样式
+list-border-bottom-1px($height, $color)
+  position relative
+  &:after
+    display block
+    position: absolute;
+    left: 0.2rem
+    bottom: 0
+    width: calc(100% - 0.4rem)
+    border-top: $height solid $color
+    content: ''
+    z-index: 1
+
+
+list-border-top-1px($height, $color)
+  position relative
+  &:before
+    display block
+    position: absolute;
+    left: 0.2rem
+    top: 0
+    width: calc(100% - 0.4rem)
+    border-top: $height solid $color
+    content: ''
+    z-index: 1
+
+border-top-bottom-1px($height, $color)
+  position relative
+  &:before
+    display block
+    position: absolute;
+    left: 0
+    top: 0
+    width: 100%
+    border-top: $height solid $color
+    content: ''
+    z-index: 1
+  &:after
+    display block
+    position: absolute;
+    left: 0
+    bottom: 0
+    width: 100%
+    border-top: $height solid $color
+    content: ''
+    z-index: 1
+
+border-left-1px($height, $color)
+  position relative
+  &:after
+    display block
+    position: absolute;
+    left: 0
+    top: 0
+    height: 100%
+    border-left: $height solid $color
+    content: ''
+    z-index: 1
+
+border-right-1px($height, $color)
+  position relative
+  &:after
+    display block
+    position: absolute;
+    right: 0
+    top: 0
+    height: 100%
+    border-left: $height solid $color
+    content: ''
+    z-index: 1
+
+border-left-right-1px($height, $color)
+  position relative
+  &:before
+    display block
+    position: absolute;
+    left: 0
+    top: 0
+    height: 100%
+    border-left: $height solid $color
+    content: ''
+    z-index: 1
+  &:after
+    display block
+    position: absolute;
+    right: 0
+    top: 0
+    height: 100%
+    border-left: $height solid $color
+    content: ''
+    z-index: 1

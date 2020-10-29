@@ -1,0 +1,36 @@
+.modal-body
+  .cntTxt
+    font-family: SourceHanSansCN-Normal;
+  .cntTxt:last-child
+    span
+      color #5893DC
+.form-group
+  padding-top 0.1rem
+  .form-label
+    height 0.43rem
+    line-height 0.43rem
+    background #ffffff
+    margin-bottom 0.01rem
+    padding-left 0.2rem
+    padding-right 0.2rem
+    .form-label-font
+      font-family SourceHanSansCN-Regular
+      color #232323
+      font-size 0.14rem
+      width 0.8rem
+    //input
+    //  font-size 0.18rem
+    //  font-family: Roboto-Regular;
+    //  color: #232323;
+    //  letter-spacing: 0;
+
+    .visible
+        .icon-invisible,.icon-visible
+          &:before
+            font-size 0.23rem
+            vertical-align middle
+
+  .validate-errors
+    padding-left 0.2rem
+    height 0.5rem
+

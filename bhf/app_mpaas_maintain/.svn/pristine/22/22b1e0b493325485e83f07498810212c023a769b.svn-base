@@ -1,0 +1,89 @@
+.cancel
+  font-family SourceHanSansCN-Medium
+  font-size 0.14rem
+  color #ffffff
+  letter-spacing 0
+
+.center-cnt
+  white-space nowrap
+  span
+    font-family: SourceHanSansCN-Medium
+    font-size 0.17rem
+    color #ffffff
+    letter-spacing 0
+.titleLeft
+  span
+    font-size 0.24rem
+    color #262D39
+
+.fanhui
+  width 0.11rem
+  height 0.23rem
+
+.img
+  width 0.30rem
+  height 0.30rem
+  //margin-bottom 0.07rem
+  border-radius 50%
+  background-color #fff
+  .setImg
+    width 0.30rem
+    height 0.30rem
+    border-radius 50%
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+  .defaultImg
+    width 0.30rem
+    height 0.30rem
+    border-radius 50%
+    background-image url("../../../common/img/headPhotoImg@3x.png")
+    background-size 100%
+
+.name
+  font-size 0.12rem
+  margin-left 0.1rem
+  color #A4997D
+  white-space nowrap
+  font-family: SourceHanSansCN-Regular;
+.real-name
+  width 0.35rem
+  height 0.12rem
+  margin-top 0.04rem
+  margin-left 0.1rem
+  img
+    width 0.35rem
+    height 0.12rem
+
+.accountCharityStatus
+  width 0.35rem
+  height 0.12rem
+  margin-top 0.04rem
+  margin-left 0.07rem
+  img
+    width 0.26rem
+    height 0.12rem
+    animation donateRotate 1s infinite
+
+.expandClickRange
+  display inline-block
+  width 0.5rem
+.icon-share
+  &:before
+     font-size 0.21rem
+.expandClickRange
+  width 0.5rem
+  //height 0.3rem
+  //line-height 0.3rem
+
+.bgOpacity
+  position: absolute
+  left: 0
+  top: 0
+  z-index: -1
+  height: 100%
+  width: 100%
+.trade
+  white-space nowrap
+

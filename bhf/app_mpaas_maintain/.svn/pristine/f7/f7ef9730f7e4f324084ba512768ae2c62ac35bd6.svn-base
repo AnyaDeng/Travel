@@ -1,0 +1,441 @@
+<template>
+  <div class="personalCenter">
+    <div class="row">
+      <ul class="list-group">
+        <custom-li class="list-group-item headPicture " @touch-delay="showActionSheet(true)">
+          <div slot="structure">
+            <span class="leftSetFont">头像</span>
+          </div>
+          <div slot="structure">
+            <span class="headPictureRight" v-cloak>
+              <img v-if="imgUrl" :src="imgUrl" :onerror="defaultImg">
+              <img v-else src="../../common/img/headPhotoImg@3x.png">
+            </span>
+            <span class="icon-advance"></span>
+          </div>
+        </custom-li>
+        <custom-li v-show="nickNameShow" class="list-group-item lineSet " @touch-delay="toSetNickName">
+          <div slot="structure">
+            <span class="leftSetFont">昵称</span>
+          </div>
+          <div slot="structure">
+            <span class="rightSetFont">{{nickName}}</span>
+            <span class="icon-advance"></span>
+          </div>
+        </custom-li>
+
+        <li class="list-group-item">
+          <div>
+            <span class="leftSetFont">手机号</span>
+          </div>
+          <div>
+            <span class="phone">{{mobile}}</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="row">
+      <ul class="list-group">
+        <custom-li class="list-group-item checkIdentity" v-if="!isRealName"
+                   @touch-delay="realNameLink">
+          <div slot="structure">
+            <span class="leftSetFont">身份认证</span>
+          </div>
+          <div slot="structure" class="identityName">
+            <span class="cardAndRisk ">未实名</span>
+            <span class="icon-advance"></span>
+          </div>
+        </custom-li>
+        <li class="list-group-item checkIdentity" v-else>
+          <div>
+            <span class="leftSetFont">身份认证</span>
+          </div>
+          <div class="identityName">
+            <span class="cardAndRisk isRealName">{{userName}}</span>
+          </div>
+        </li>
+        <custom-li class="list-group-item " @touch-delay="riskAssessment">
+          <div slot="structure">
+            <span class="leftSetFont">风险评估</span>
+          </div>
+          <div slot="structure">
+            <span class="cardAndRisk">{{riskName}}</span>
+            <span class="icon-advance"></span>
+          </div>
+        </custom-li>
+        <custom-li class="list-group-item " @touch-delay="passwordSet">
+          <div slot="structure">
+            <span class="leftSetFont">密码设置</span>
+          </div>
+          <div slot="structure">
+            <span class="icon-advance"></span>
+          </div>
+        </custom-li>
+      </ul>
+    </div>
+
+    <div class="row">
+      <ul class="list-group">
+        <custom-li class="list-group-item " @touch-delay="clearCache">
+          <div slot="structure">
+            <span class="leftSetFont">清除缓存</span>
+          </div>
+          <div slot="structure">
+            <span class="icon-advance"></span>
+          </div>
+        </custom-li>
+        <custom-li class="list-group-item " @touch-delay="aboutUs">
+          <div slot="structure">
+            <span class="leftSetFont">关于我们</span>
+          </div>
+          <div slot="structure" class="flex-center-center">
+            <span class="updateSpot" v-if="isUpdateDot"></span>
+            <span class="cardAndRisk">{{updateText}}</span>
+            <span class="icon-advance"></span>
+          </div>
+        </custom-li>
+
+        <custom-li class="list-group-item" @touch-delay="highPraise" v-if="isIOSDevice()">
+          <div slot="structure">
+            <span class="leftSetFont">给个好评</span>
+          </div>
+          <div slot="structure">
+            <span class="icon-advance"></span>
+          </div>
+        </custom-li>
+      </ul>
+    </div>
+
+    <div class="row" v-for="(column,columnIndex) in columnList" :key="columnIndex">
+      <ul class="list-group">
+        <custom-li class="list-group-item" v-for="(item,index) in column" :key="index" v-if="checkShowDevice(item.visible)" @touch-delay="openColumnLink(item)">
+          <div slot="structure">
+            <span class="leftSetFont">{{item.name}}</span>
+          </div>
+          <div slot="structure" v-if="isNotEmpty(item.url)">
+            <span class="icon-advance"></span>
+          </div>
+        </custom-li>
+      </ul>
+    </div>
+
+    <div class="btn-container" :style="{'padding-bottom': paddingBottom}">
+      <div class="btn-success " @click="loginOut">
+        <span>安全退出</span>
+      </div>
+    </div>
+
+    <div>
+      <popupBottomScreen ref="popupBottomScreen" :modal-options.sync="modalScreen">
+        <ul slot="button" class="photo" :style="{'padding-bottom': paddingBottom}">
+          <custom-li @touch-delay="getPicture(false)" class="">
+            <span slot="structure">拍照</span>
+          </custom-li>
+          <custom-li @touch-delay="getPicture(true)" class="">
+            <span slot="structure">从相册获取</span>
+          </custom-li>
+          <custom-li @touch-delay="showActionSheet(false)" class="alert photoCancel ">
+            <span slot="structure">取消</span>
+          </custom-li>
+        </ul>
+      </popupBottomScreen>
+    </div>
+    <div>
+      <confirm ref="dialog" :modal-options.sync="alertModel"></confirm>
+    </div>
+
+    <!--给个好评弹窗-->
+    <div class="evaluatePopup">
+      <confirm ref="praisedialog" :modal-options.sync="modal">
+      </confirm>
+    </div>
+  </div>
+</template>
+<script type="text/ecmascript-6">
+  import popupBottomScreen from 'components/common/popup/popupBottomScreen';
+  import {TransferDom, Actionsheet, Group, XSwitch, Toast} from 'vux';
+  import VueResource from 'vue-resource';
+
+  export default {
+    directives: {
+      TransferDom
+    },
+    components: {
+      popupBottomScreen,
+      Actionsheet,
+      Group,
+      XSwitch,
+      Toast
+    },
+    data() {
+      return {
+        apiName: {
+          logout: this.apiType().logout,
+          queryParamValue: this.apiType().queryParamValue
+        },
+        pageConfig: {
+          headerLeft: this.headerBtn.backArrow,
+          headerTitle: '个人中心'
+        },
+        mobile: this.getUserStorage('mobile'),
+        nickNameShow: true,
+        nickName: this.getUserStorage('nickName'),
+        imgUrl: '',
+        show3: true,
+        show6: false,
+        show8: false,
+        modalScreen: {},
+        alertModel: {
+          text: '请先进行实名认证',
+          cancelButtonText: '取消',
+          confirmButtonText: '确定',
+          min: true
+        },
+        modal: {
+          color: true,
+          showCancelButton: false,
+          confirmButtonText: '去给好评',
+          isShowCloseBtn: true,
+          min: true,
+          highpraise: true
+        },
+        paddingBottom: '0rem',
+        defaultImg: 'this.src="' + require('../../common/img/gjsLogos.png') + '"',
+        riskName: '--',
+        updateText: '', // 是否为最新版本
+        isUpdateDot: false, // 版本红点提示
+        userAgreement_sever: this.$store.getters.h5Url + this.fileRelativePath() + '/register/bhfaePersonalMembershipServiceProtocol.html?bhfae_titleText=用户协议',
+        privacy_sever: this.$store.getters.h5Url + this.fileRelativePath() + '/register/privacyPolicy.html?bhfae_titleText=隐私政策',
+        columnList: [],
+        isRealName: this.isUserRealName(),
+        userName: this.getUserStorage('name')
+      };
+    },
+    created() {
+      if (this.isIphoneX()) {
+        this.paddingBottom = '0.34rem';
+      }
+    },
+    mounted() {
+      let _this = this;
+      this.sendMsgToParent();
+      this.getUserCenterData();
+      this.refreshUserPortrait();
+      this.handleRiskName();
+      this.getLatestVersion(function (value) {
+        _this.compareVersionFun(value);
+      });
+      this.refreshUserInfo(function () {
+        _this.handleRiskName();
+      });
+      // 监听兄弟组件点击事件
+      this.addObserve(this.getRouterBackKey(), this.headerListen);
+      // 监听刷新用户信息完成,修改页面展示内容
+      this.addObserve('refreshUserInfoFinish', () => {
+        this.isRealName = this.isUserRealName();
+        this.userName = this.getUserStorage('name');
+        this.nickName = this.getUserStorage('nickName');
+        this.handleRiskName();
+      });
+    },
+    methods: {
+      handleRiskName() {
+        let _this = this;
+        if (!this.$store.getters.dictionaryList.CUSTOMER_RISK) {
+          this.fetchDict(function () {
+            _this.riskName = _this.getRiskName(_this.getUserStorage('risk'));
+          });
+        } else {
+          this.riskName = this.getRiskName(this.getUserStorage('risk'));
+        }
+      },
+      sendMsgToParent() {
+        this.$emit('listenToChildEvent', this.pageConfig);
+      },
+      // 监听头部组件事件
+      headerListen(params) {
+        // 点击取消回退
+        this.$router.push({
+          name: 'assets'
+        });
+      },
+      refreshUserPortrait() {
+        let iconAddress = this.getUserStorage('icon');
+        if (iconAddress) {
+          this.imgUrl = this.$store.getters.fileUrl + iconAddress + '?' + Math.random();
+        }
+      },
+      getPicture(isPhotoAlbum) {
+        this.showActionSheet(false);
+        let _this = this;
+        if (isPhotoAlbum) {
+          _this.mtj_event('app_personal_portrait_album', '修改头像点击选则相册按钮');
+          _this.analysys.ma_btnClick('修改头像点击选则相册按钮');
+        } else {
+          _this.mtj_event('app_personal_portrait_camera', '修改头像点击选则相机按钮');
+          _this.analysys.ma_btnClick('修改头像点击选则相机按钮');
+        }
+        let params = {
+          isAlbum: isPhotoAlbum,
+          allowEdit: true
+        };
+        this.getPicForPortrait(params, function (path) {
+          _this.getBase64WithPath(path, function (base64DataPath) {
+            _this.uploadPortrait("fileList", base64DataPath, function () {
+              _this.refreshUserInfo(function () {
+                _this.refreshUserPortrait();
+                _this.setSessionStorage('isNeedRefreshUserPortrait', '1');
+              });
+            });
+          });
+        }, function (message) {
+          if (message === 20) {
+            _this.$toast('权限不足,此功能无法使用');
+          }
+        });
+      },
+      showActionSheet(isShow) {
+        this.mtj_event('app_personal_portrait', '个人中心页点击头像');
+        this.analysys.ma_btnClick('个人中心页点击头像');
+        this.$refs.popupBottomScreen.popupScreenShow = isShow;
+      },
+      toSetNickName() {
+        this.mtj_event('app_personal_nickName', '个人中心页点击昵称');
+        this.analysys.ma_btnClick('个人中心页点击昵称');
+        let params = {
+          "action": "account_nickname"
+        };
+        this.showAppH5(params);
+      },
+      loginOut() {
+        let _this = this;
+        _this.mtj_event('app_personal_logout', '个人中心页点击退出登录');
+        _this.analysys.ma_btnClick('个人中心页点击昵称');
+        _this.$confirm("", "确定退出登录？", function () {
+          _this.ajaxSilence(_this.apiName.logout, _this.serviceType().api, {});
+          _this.removeLocalStorage('bhfae_userInfo');
+          _this.exitLogin(function () {
+            // _this.fetchToken();
+            _this.$router.push({
+              path: '/unloginHomePage'
+            });
+          });
+        });
+      },
+      getLatestVersion(callback) {
+        let latestVer = this.$store.getters.AppVersion;
+        if(this.isNotEmpty(latestVer)) {
+          callback(latestVer);
+        } else {
+          this.doGetLatestVersion(callback);
+        }
+      },
+      compareVersionFun (value){
+        let hasNewVersion = this.hasNewVersion(this.getAppVersion(), value);
+        this.updateText = hasNewVersion ? '发现新版本': '当前版本'+ this.getAppVersion();
+        this.isUpdateDot = hasNewVersion;
+      },
+      jumpToAccountAction(acAction) {
+        let params = {
+          "action": "account_action",
+          'ac_actions': acAction
+        };
+        this.showPlatformH5(params);
+      },
+      realNameLink() {
+        this.mtj_event('app_personal_realName', '个人中心页点击身份认证');
+        this.analysys.ma_btnClick('个人中心页点击身份认证');
+        this.refreshUserInfo(() => {
+          if (!this.isUserRealName()) {
+            this.jumpToAccountAction('real_name');
+          }
+        });
+      },
+      // 清楚缓存
+      clearCache() {
+        this.$loading();
+        this.deviceClearCache(); // 清除缓存
+        this.webhub_refreshStartTime(); // 刷新时间
+        setTimeout(() => {
+          this.$loadingHide();
+          this.$toast('清除成功');
+        }, 2000);
+
+      },
+      aboutUs() {
+        this.mtj_event('app_personal_aboutUs', '个人中心页点击关于我们');
+        this.analysys.ma_btnClick('个人中心页点击关于我们');
+        this.$router.push({
+          path: '/aboutUs'
+        });
+      },
+      riskAssessment() {
+        this.mtj_event('app_personal_risk', '个人中心页点击风险评估');
+        this.analysys.ma_btnClick('个人中心页点击风险评估');
+        this.refreshUserInfo(() => {
+          if (this.isUserRealName()) {
+            this.jumpToAccountAction('risk_assessment');
+          } else {
+            this.$confirmCtrl('', '风险评估需先进行实名认证', '立刻认证', '', () => {
+              this.jumpToAccountAction('real_name,risk_assessment');
+            });
+          }
+        }, true);
+      },
+      passwordSet() {
+        this.mtj_event('app_personal_setPwd', '个人中心页点击密码设置');
+        this.analysys.ma_btnClick('个人中心页点击密码设置');
+        this.$router.push({
+          name: 'passwordSet'
+        })
+      },
+      dialogShow() {
+        this.$refs.praisedialog.show = true;
+      },
+      highPraise() {
+        this.dialogShow();
+        this.toPromiseFun();
+      },
+      //点击吐槽、去好评按钮回调函数
+      toPromiseFun() {
+        let _this = this;
+        _this.$refs.praisedialog.confirm().then(() => {
+          _this.mtj_event('app_personal_highpraise_btn', '个人中心页面点击给好评');
+          _this.analysys.ma_btnClick('个人中心页面点击给好评');
+          _this.openAppStore(); // 跳转应用商店
+          _this.$refs.praisedialog.show = false;
+        });
+      },
+      // 获取本地存储中的栏目项(若为空则重新请求赋值)
+      getUserCenterData() {
+        this.columnList = JSON.parse(this.notEmpty(this.getLocalStorage('bhfae_userCenterColumn'), '[]'));
+        if (!this.isNotEmpty(this.columnList)) {
+          this.queryUserCenterColums(() => {
+            this.columnList = JSON.parse(this.notEmpty(this.getLocalStorage('bhfae_userCenterColumn'), '[]'));
+          })
+        }
+      },
+      // 匹配栏目元素展示设备
+      checkShowDevice(visible) {
+        let showState = true;
+        if (visible === '1') { // '1': ios  '2': android
+          showState = this.isIOSDevice();
+        } else if (visible === '2') {
+          showState = !this.isIOSDevice();
+        }
+        return showState;
+      },
+      openColumnLink(item) {
+        if (this.isNotEmpty(item.url)) {
+          this.showBhfaeBrowser(this.urlJoinCommonParam(item.url));
+        }
+      }
+    }
+  };
+</script>
+
+<style scoped lang="stylus" rel="stylesheet/stylus">
+  @import "personalCenter.styl";
+  .evaluatePopup >>> .modal-footer .btn-active
+    border-left-1px(0px, #D2D7E0)
+</style>

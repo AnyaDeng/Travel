@@ -1,0 +1,235 @@
+.yo-scroll::-webkit-scrollbar
+  width: 0
+  height: 0
+
+.yo-scroll
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: 5
+  overflow: auto
+  height: auto
+  -webkit-overflow-scrolling: touch
+  .inner
+    position: absolute
+    top: -3rem
+    width: 100%
+    height: auto
+    transition-duration: 300ms
+    .pull-refresh
+      position: relative
+      left: 0
+      top: 0
+      z-index: 8
+      width: 100%
+      height: 3rem
+      box-sizing border-box
+      padding-bottom: 0.1rem
+      display: flex
+      display: -webkit-flex
+      justify-content: center
+      -webkit-justify-content: center
+      align-items: flex-end
+      -webkit-align-items: flex-end
+      background: #263147
+
+    .load-more
+      position: relative
+      left: 0
+      top: 0
+      width: 100%
+      height: 0.5rem
+      line-height: 0.5rem;
+      text-align: center
+      background: #F7F7F9
+      font-size: 0.12rem
+      color: #7D8497
+
+    .down-tip,
+    .up-tip
+      display: none
+      font-size: 0.12rem
+      color: #7D8497
+      font-family SourceHanSansCN-Regular
+    .refresh-tip
+      display: none
+      font-size: 0.12rem
+      color: #7D8497
+      font-family SourceHanSansCN-Regular
+    .down-tip:before,
+    .up-tip:before
+      content: ''
+      display: inline-block
+      width: 0.24rem
+      height: 0.24rem
+      background-size: 100% !important
+    .refresh-tip:before
+      content: ''
+      display: inline-block
+      width: 0.24rem
+      height: 0.24rem
+      background-size: 100% !important
+    .up-tip:before
+      background: url(./img/down-logo.png) no-repeat center
+    .refresh-tip:before
+      background: url(./img/refresh-logo.gif) no-repeat center
+    .down-tip:before
+      background: url(./img/down-logo.png) no-repeat center
+    .more-tip
+      font-size: 0.12rem
+      color: #7D8497
+      display: flex
+      align-items: center
+      justify-content: center
+      font-family SourceHanSansCN-Regular
+
+    .more-tip:before
+      content: ''
+      display: inline-block
+      width: 0.23rem
+      height: 0.23rem
+      background-size: 100% !important
+      margin-right: 0.05rem
+
+    .more-tip:before
+      -webkit-animation: weuiLoading 1s steps(12, end) infinite
+      animation: weuiLoading 1s steps(12, end) infinite
+      background: url(./img/img-loading.png) no-repeat center
+
+.yo-scroll.touch .inner
+  transition-duration: 0
+
+.yo-scroll.down .down-tip
+  display: flex
+  align-items: center
+  font-family SourceHanSansCN-Regular
+
+.yo-scroll.up .up-tip
+  display: flex
+  align-items: center
+  font-family SourceHanSansCN-Regular
+
+.yo-scroll.refresh .refresh-tip
+  display: flex
+  align-items: center
+  font-family SourceHanSansCN-Regular
+
+//@keyframes run{
+//    0%{
+//        background-position: 0 0;
+//    }
+//    6.25%{
+//        background-position: -65px 0;
+//    }
+//    12.5%{
+//        background-position: -130px 0 ;
+//    }
+//    18.75%{
+//        background-position: -195px 0 ;
+//    }
+//    25%{
+//        background-position: -260px 0 ;
+//    }
+//    31.25%{
+//        background-position: -325px 0 ;
+//    }
+//    37.5%{
+//        background-position: -390px 0 ;
+//    }
+//    43.75%{
+//        background-position: -455px 0 ;
+//    }
+//    50%{
+//        background-position: -520px 0 ;
+//    }
+//    56.25%{
+//        background-position: -585px 0 ;
+//    }
+//    62.5%{
+//        background-position: -650px 0 ;
+//    }
+//    68.75%{
+//        background-position: -715px 0 ;
+//    }
+//    75%{
+//        background-position: -780px 0 ;
+//    }
+//    81.25%{
+//        background-position: -845px 0 ;
+//    }
+//    87.5%{
+//        background-position: -910 0 ;
+//    }
+//    93.75%{
+//        background-position: -975px 0 ;
+//    }
+//    100%{
+//        background-position: 0 0 ;
+//    }
+//}
+//@-webkit-keyframes run{
+//    0%{
+//        background-position: 0 0;
+//    }
+//    6.25%{
+//        background-position: -65px 0;
+//    }
+//    12.5%{
+//        background-position: -130px 0 ;
+//    }
+//    18.75%{
+//        background-position: -195px 0 ;
+//    }
+//    25%{
+//        background-position: -260px 0 ;
+//    }
+//    31.25%{
+//        background-position: -325px 0 ;
+//    }
+//    37.5%{
+//        background-position: -390px 0 ;
+//    }
+//    43.75%{
+//        background-position: -455px 0 ;
+//    }
+//    50%{
+//        background-position: -520px 0 ;
+//    }
+//    56.25%{
+//        background-position: -585px 0 ;
+//    }
+//    62.5%{
+//        background-position: -650px 0 ;
+//    }
+//    68.75%{
+//        background-position: -715px 0 ;
+//    }
+//    75%{
+//        background-position: -780px 0 ;
+//    }
+//    81.25%{
+//        background-position: -845px 0 ;
+//    }
+//    87.5%{
+//        background-position: -910 0 ;
+//    }
+//    93.75%{
+//        background-position: -975px 0 ;
+//    }
+//    100%{
+//        background-position: 0 0 ;
+//    }
+//}
+//.refresh-tip:before
+//      content: ''
+//      display: inline-block
+//      width: 0.24rem
+//      height: 0.24rem
+//      background-size: cover !important
+//.refresh-tip:before {
+//    background: url(../../../common/img/refresh.png);
+//    animation:run 1s steps(1, start) infinite;
+//    -webkit-animation:run 1s steps(1, start) infinite;
+//}

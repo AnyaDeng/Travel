@@ -1,0 +1,205 @@
+.icon-advance
+  &:before
+    content "\e90c"
+    color #d8a752
+    font-size 0.12rem
+
+.icon-asset
+  &:before
+    content "\e900"
+    color #d5a664
+
+.icon-calendar
+  &:before
+    content "\e901"
+    color #fff
+
+.icon-current
+  &:before
+    content "\e902"
+    color #dcad5b
+
+.icon-Fund
+  &:before
+    content "\e903"
+    color #dcad5b
+
+.icon-home
+  &:before
+    color red
+
+.icon-investment
+  &:before
+    color #d5a664
+.icon-loans
+  &:before
+    content "\e906"
+    color #dcad5b
+
+.icon-message
+  &:before
+    content "\e907"
+    color #fff
+
+.icon-service
+  &:before
+    content "\e908"
+    color #fff
+
+.icon-tag
+  &:before
+    content "\e909"
+
+.icon-tag_fullScale
+  &:before
+    content "\e90a"
+    color #dbdfe6
+
+.icon-terminal
+  &:before
+    content "\e90b"
+    color #dcad5b
+
+.icon-visible
+  &:before
+    content "\e911"
+    color #dcad5b
+    font-size 0.15rem
+
+.icon-invisible
+  &:before
+    content "\e910"
+    color #dcad5b
+    font-size 0.23rem
+
+.icon-camera
+  &:before
+    content "\e90e"
+    color #dcad5b
+    font-size 0.23rem
+
+.icon-back
+  &:before
+    content "\e90d"
+    color #ffffff
+    font-size 0.21rem
+
+.icon-reminder-7f
+  &:before
+    content "\e91c"
+    color #d2d7e0
+    font-size 0.14rem
+
+
+.icon-SignIn
+  &:before
+    content "\e921"
+    color #263147
+    font-size 0.27rem
+
+.icon-voucher
+  &:before
+    content "\e922"
+    color #263147
+    font-size 0.27rem
+
+.icon-integration
+  &:before
+    content "\e918"
+    color #263147
+    font-size 0.27rem
+
+.icon-balance
+  &:before
+    content "\e916"
+    color #d2d7e0
+    font-size 0.20rem
+
+.icon-myGJB
+  &:before
+    content "\e91a"
+    color #d2d7e0
+    font-size 0.20rem
+
+.icon-myRegular
+  &:before
+    content "\e91d"
+    color #d2d7e0
+    font-size 0.20rem
+
+.icon-myFund
+  &:before
+    content "\e919"
+    color #d2d7e0
+    font-size 0.20rem
+
+.icon-myLoan
+  &:before
+    content "\e91b"
+    color #d2d7e0
+    font-size 0.20rem
+
+.icon-CCB
+  &:before
+    content: "\e917";
+    color: #6098DE;
+    font-size: 0.35rem;
+
+.icon-CloseBounced
+  &:before
+    content: "\e912";
+    font-size: 0.2rem;
+
+.icon-progressBar3
+  &:before
+    content: "\e912";
+    font-size: 0.2rem;
+    color #d2d7e0
+
+.icon-advance_7D
+  &:before
+    content "\e90c"
+    color #7D8497
+
+.icon-advance_D6
+  &:before
+    content "\e90c"
+    color #D6DBE3
+
+.icon-reminder
+  &:before
+    content "\e91f"
+    font-size 0.12rem
+.icon-progressBar1
+  &:before
+    content "\e913"
+    font-size 0.73rem
+    color #D6A765
+
+.icon-progressBar2
+  &:before
+    content "\e914"
+    font-size 0.73rem
+    color #D6DBE3
+
+.icon-reminderD6
+  &:before
+    content "\e91f"
+    font-size 0.05rem
+    color #D6DBE3
+
+.icon-set
+  &:before
+    content "\e920"
+    font-size 0.2rem
+    color #ffff
+
+.icon-filtrate
+  &:before
+    font-size 0.23rem
+
+.icon-file
+  &:before
+    content: "\e925";
+    font-size 0.23rem
+    color: #fff;

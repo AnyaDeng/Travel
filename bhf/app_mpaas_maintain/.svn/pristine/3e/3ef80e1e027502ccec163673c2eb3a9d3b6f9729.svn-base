@@ -1,0 +1,88 @@
+@import "../../../common/stylus/mixin.styl";
+.container-fluid
+  background: #263147
+  padding: 0
+  .photo
+    width 100%
+    background-size: cover;
+    background-image url("../../../common/img/background.jpg")
+    background-position top
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+.fingerprint
+  video
+    width 99.4%
+  .passInformation
+    width: 100%
+    position: absolute
+    top: 0.64rem
+    left: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    div
+      font-family: SourceHanSansCN-Regular
+      letter-spacing: 0
+      color: #fff
+    div.welcoming
+      font-family: SourceHanSansCN-Regular
+      margin: 0.845rem 0 0.9rem 0
+      font-size: 0.18rem
+      span
+        display: inline-block
+        width: 0.1rem
+    .passContent
+      display: flex
+      display: -webkit-flex
+      justify-content: center
+      -webkit-justify-content: center
+      align-items: center
+      -webkit-align-items: center
+      flex-direction: column
+      .fingerIcon
+        width 0.8rem
+        height 0.8rem
+        bg-image('./img/fingerprint')
+        background-size cover
+        background-repeat no-repeat
+      .faceIcon
+        width 0.8rem
+        height 0.8rem
+        background-image url('./img/faceID.png')
+        background-size cover
+        background-repeat no-repeat
+      .fingerMessage
+        margin 0.165rem 0 0
+        font-family: SourceHanSansCN-Regular
+        font-size: 0.14rem
+        color: #D5A764
+  .ctrlBtn
+    position: absolute
+    bottom: 0.3rem
+    left: 0
+    width: 100%
+    .btn-box
+      .btn-container:first-child
+        span
+          a
+            color: #6098DE
+            font-size: 0.14rem
+      .btn-container:last-child
+        span
+          a
+            color: #fff
+            font-size: 0.12rem
+    .loginAgreement
+      font-family: SourceHanSansCN-Regular
+      font-size: 0.12rem
+      color: #7D8497
+      letter-spacing: 0
+      line-height: 0.18rem
+      padding: 0.23rem 0.26rem 0.2rem
+      span
+        color: #D5A764
